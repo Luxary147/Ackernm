@@ -1,0 +1,20 @@
+
+INSERT INTO Tcartas (nombre , ulr_imagen) VALUES ( Mage , )
+
+INSERT INTO Tcartas (nombre , ulr_imagen) VALUES ( Hunter , )
+
+INSERT INTO Tcartas (nombre , ulr_imagen) VALUES ( Demon Hunter , )
+
+INSERT INTO Tcartas (nombre , ulr_imagen) VALUES ( Priest , )
+
+INSERT INTO Tcartas (nombre , ulr_imagen) VALUES ( Warrior , )
+
+INSERT INTO Tcartas (nombre , ulr_imagen) VALUES ( Rogue , )
+
+INSERT INTO Tcartas (nombre , ulr_imagen) VALUES ( Druid , )
+
+INSERT INTO Tcartas (nombre , ulr_imagen) VALUES ( Shaman , )
+
+INSERT INTO Tcartas (nombre , ulr_imagen) VALUES ( Warlock , )
+
+INSERT INTO Tcartas (nombre , ulr_imagen) VALUES ( Paladin , )

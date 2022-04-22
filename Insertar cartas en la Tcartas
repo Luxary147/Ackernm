@@ -1,20 +1,20 @@
 
-INSERT INTO Tcartas (nombre , ulr_imagen) VALUES ( Mage , )
+INSERT INTO Tcartas (nombre , ulr_imagen) VALUES ( Mage , https://i.imgur.com/4tuZVdB.png)
 
-INSERT INTO Tcartas (nombre , ulr_imagen) VALUES ( Hunter , )
+INSERT INTO Tcartas (nombre , ulr_imagen) VALUES ( Hunter , https://i.imgur.com/PBUsZdv.png)
 
-INSERT INTO Tcartas (nombre , ulr_imagen) VALUES ( Demon Hunter , )
+INSERT INTO Tcartas (nombre , ulr_imagen) VALUES ( Demon Hunter , https://i.imgur.com/khhJnDx.png )
 
-INSERT INTO Tcartas (nombre , ulr_imagen) VALUES ( Priest , )
+INSERT INTO Tcartas (nombre , ulr_imagen) VALUES ( Priest , https://i.imgur.com/CNvKDDh.png)
 
-INSERT INTO Tcartas (nombre , ulr_imagen) VALUES ( Warrior , )
+INSERT INTO Tcartas (nombre , ulr_imagen) VALUES ( Warrior , https://i.imgur.com/GukTSbH.png)
 
-INSERT INTO Tcartas (nombre , ulr_imagen) VALUES ( Rogue , )
+INSERT INTO Tcartas (nombre , ulr_imagen) VALUES ( Rogue , https://i.imgur.com/JNNrxzx.png)
 
-INSERT INTO Tcartas (nombre , ulr_imagen) VALUES ( Druid , )
+INSERT INTO Tcartas (nombre , ulr_imagen) VALUES ( Druid , https://i.imgur.com/GjovbWI.png)
 
-INSERT INTO Tcartas (nombre , ulr_imagen) VALUES ( Shaman , )
+INSERT INTO Tcartas (nombre , ulr_imagen) VALUES ( Shaman , https://i.imgur.com/Rp5zQKg.png)
 
-INSERT INTO Tcartas (nombre , ulr_imagen) VALUES ( Warlock , )
+INSERT INTO Tcartas (nombre , ulr_imagen) VALUES ( Warlock , https://i.imgur.com/0VKXv39.png)
 
-INSERT INTO Tcartas (nombre , ulr_imagen) VALUES ( Paladin , )
+INSERT INTO Tcartas (nombre , ulr_imagen) VALUES ( Paladin , https://i.imgur.com/iNpy2Vb.png)

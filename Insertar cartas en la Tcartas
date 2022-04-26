@@ -1,20 +1,36 @@
 
+INSERT INTO Tcartas (nombre , ulr_imagen) VALUES ( Mage , https://raw.githubusercontent.com/Luxary147/Ackernm/main/raw/Mago_TradingCard(common).png )
+
+INSERT INTO Tcartas (nombre , ulr_imagen) VALUES ( Hunter , https://raw.githubusercontent.com/Luxary147/Ackernm/main/raw/Hunter_TradingCard%20(common).png)
+
+INSERT INTO Tcartas (nombre , ulr_imagen) VALUES ( Demon Hunter , https://raw.githubusercontent.com/Luxary147/Ackernm/main/raw/Demon_Hunter_TradingCard%20(epic).png)
+
+INSERT INTO Tcartas (nombre , ulr_imagen) VALUES ( Priest , https://raw.githubusercontent.com/Luxary147/Ackernm/main/raw/Priest_TradingCard(rare).png)
+
+INSERT INTO Tcartas (nombre , ulr_imagen) VALUES ( Warrior , https://raw.githubusercontent.com/Luxary147/Ackernm/main/raw/Warrior_TradingCard(rare).png)
+
+INSERT INTO Tcartas (nombre , ulr_imagen) VALUES ( Rogue , https://raw.githubusercontent.com/Luxary147/Ackernm/main/raw/Rogue_TradingCard%20(rare).png)
+
+INSERT INTO Tcartas (nombre , ulr_imagen) VALUES ( Druid , https://raw.githubusercontent.com/Luxary147/Ackernm/main/raw/Druid_TradingCard%20(common).png)
+
+INSERT INTO Tcartas (nombre , ulr_imagen) VALUES ( Shaman , https://raw.githubusercontent.com/Luxary147/Ackernm/main/raw/Shaman_TradingCard(epic).png)
+
+INSERT INTO Tcartas (nombre , ulr_imagen) VALUES ( Warlock , https://raw.githubusercontent.com/Luxary147/Ackernm/main/raw/Warlock_TradingCard(epic).png)
+
+INSERT INTO Tcartas (nombre , ulr_imagen) VALUES ( Paladin , https://raw.githubusercontent.com/Luxary147/Ackernm/main/raw/Paladin_TradingCard(rare).png)
+
+
+
+
+*/ Forma antigua 
+
 INSERT INTO Tcartas (nombre , ulr_imagen) VALUES ( Mage , https://i.imgur.com/4tuZVdB.png)
-
 INSERT INTO Tcartas (nombre , ulr_imagen) VALUES ( Hunter , https://i.imgur.com/PBUsZdv.png)
-
 INSERT INTO Tcartas (nombre , ulr_imagen) VALUES ( Demon Hunter , https://i.imgur.com/khhJnDx.png )
-
 INSERT INTO Tcartas (nombre , ulr_imagen) VALUES ( Priest , https://i.imgur.com/CNvKDDh.png)
-
 INSERT INTO Tcartas (nombre , ulr_imagen) VALUES ( Warrior , https://i.imgur.com/GukTSbH.png)
-
 INSERT INTO Tcartas (nombre , ulr_imagen) VALUES ( Rogue , https://i.imgur.com/JNNrxzx.png)
-
 INSERT INTO Tcartas (nombre , ulr_imagen) VALUES ( Druid , https://i.imgur.com/GjovbWI.png)
-
 INSERT INTO Tcartas (nombre , ulr_imagen) VALUES ( Shaman , https://i.imgur.com/Rp5zQKg.png)
-
 INSERT INTO Tcartas (nombre , ulr_imagen) VALUES ( Warlock , https://i.imgur.com/0VKXv39.png)
-
 INSERT INTO Tcartas (nombre , ulr_imagen) VALUES ( Paladin , https://i.imgur.com/iNpy2Vb.png)

@@ -4,7 +4,7 @@ nombre VARCHAR (18),
 contarseña VARCHAR (200),
 email VARCHAR (200),
 esencias INTEGER,
-fecha_ultimo_login DATE ,
+fecha_ultimo_login DATE 
 );
 
 
@@ -12,7 +12,7 @@ fecha_ultimo_login DATE ,
 CREATE TABLE Tcarta(
 id INTEGER PRIMARY KEY AUTO_INCREMENT,
 nombre VARCHAR (30),
-url_imagen VARCHAR (200),
+url_imagen VARCHAR (200)
 );
 
 
@@ -22,6 +22,6 @@ CREATE TABLE TcartaUsuario(
 id INTEGER PRIMARY KEY AUTO_INCREMENT,
 idCarta INTEGER,
 idUsuario INTEGER ,
-FOREIGN KEY (idUsuario) REFERENCES Tusuario (id)
+FOREIGN KEY (idUsuario) REFERENCES Tusuario (id) ,
 FOREIGN KEY (idCarta) REFERENCES Tcarta (id)
 );

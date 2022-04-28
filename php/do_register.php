@@ -1,5 +1,10 @@
 <?php
 
+ini_set('display_errors', 'On');
+require __DIR__ . '/../php/db_connection.php';
+
+$mysqli = get_db_connection_or_die();
+
 $nick = $_POST['nick'];
 $email = $_POST['email'];
 $pass = $_POST['pass'];

@@ -11,9 +11,9 @@
     <div id="formulario">
 
         <h1> Login </h1>
-        <form action="login.php" method="post" id="formulario">
-            <input name="f_email" type="email" placeholder="e-mail" id ="f_email"><br>
-            <input name="f_password" type="password" placeholder="Contraseña" id ="f_password"><br>
+        <form action="do_login.php" method="post" id="formulario">
+            <input name="l_email" type="email" placeholder="e-mail" id ="l_email"><br>
+            <input name="l_password" type="password" placeholder="Contraseña" id ="l_password"><br>
             <input type="submit" value="Login">
         </form>
 

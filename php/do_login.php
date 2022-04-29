@@ -4,7 +4,12 @@
   $email_posted = $_POST['l_email'];
   $password_posted = $_POST['l_password'];
 
+echo ($email_posted);
+echo ($password_posted);
+
   $query = "SELECT id, encrypted_password FROM Tusuario WHERE email = '".$email_posted."'";
+
+echo ($query);
 
   $result = mysqli_query($db, $query) or die('Query error');
 //el fallo que tengo esta en esta linea 

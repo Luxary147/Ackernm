@@ -7,6 +7,8 @@
 
 $db = mysqli_connect('localhost', 'root', '1234', 'Ackernm') or die('Fail');
 
+echo ($db);
+
 $nick = $_POST['nick'];
 $email = $_POST['email'];
 $pass = $_POST['pass'];

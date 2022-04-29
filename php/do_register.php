@@ -21,7 +21,8 @@ echo ($pass);
 
 $sql = "INSERT INTO Tusuario (nick, email, encrypted_password) VALUES  (?, ?, ?)";
 $stmt = $mysqli -> prepare($sql);
-$pass = password_hash($_POST['pass'], PASSWORD_BCRYPT);
+$passH = password_hash($_POST['pass'], PASSWORD_BCRYPT);
+echo ($passH);
 $stmt -> bind_param("sss", $nick, $email, $pass);
 $stmt -> execute();
 $stmt -> close();

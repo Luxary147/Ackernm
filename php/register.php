@@ -12,7 +12,7 @@
 
         <h1> Registro </h1>
         <form action="do_register.php" method="post" id="registro">
-            <input name="nick" type="" placeholder="Nombre de Usuario" id ="nick"><br>
+            <input name="nick" type="text" placeholder="Nombre de Usuario" id ="nick"><br>
             <input name="email" type="email" placeholder="e-mail" id ="f_email"><br>
             <input name="pass" type="password" placeholder="Contraseña" id ="pass"><br>
             <input name="pass2" type="password" placeholder="Repetir Contraseña" id ="pass2"><br>

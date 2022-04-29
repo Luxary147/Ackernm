@@ -14,8 +14,11 @@ echo ($query);
   $result = mysqli_query($db, $query) or die('Query error');
 //el fallo que tengo esta en esta linea 
 
+echo ("hola");
 
   if (mysqli_num_rows($result) > 0) {
+    
+    echo ("adios");
 
       $only_row = mysqli_fetch_array($result);
 

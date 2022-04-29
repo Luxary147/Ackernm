@@ -7,7 +7,7 @@
 echo ($email_posted);
 echo ($password_posted);
 
-  $query = "SELECT id, encrypted_password FROM Tusuario WHERE email = '".$email_posted."'";
+  $query = "SELECT id, contraseña FROM Tusuario WHERE email = '".$email_posted."'";
 
 echo ($query);
 

@@ -7,6 +7,7 @@
   $query = "SELECT id, encrypted_password FROM Tusuario WHERE email = '".$email_posted."'";
 
   $result = mysqli_query($db, $query) or die('Query error');
+//el fallo que tengo esta en esta linea 
 
 
   if (mysqli_num_rows($result) > 0) {
@@ -27,3 +28,4 @@
 
       }
 }
+?>

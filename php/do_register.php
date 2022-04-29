@@ -7,6 +7,11 @@
 
 $db = mysqli_connect('localhost', 'root', '1234', 'Ackernm') or die('Fail');
 
+if (!$db) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+echo "Connected successfully";
+
 
 $nick = $_POST['nick'];
 $email = $_POST['email'];

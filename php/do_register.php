@@ -28,6 +28,7 @@ echo ($passH);
 $stmt -> bind_param("sss", $nick, $email, $pass);
 
 echo ($stmt);
+echo ("hola");
 
 if ($stmt == True) {
   echo ("Funciona");

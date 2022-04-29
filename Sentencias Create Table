@@ -1,7 +1,7 @@
 CREATE TABLE Tusuario(
 id INTEGER PRIMARY KEY AUTO_INCREMENT,
 nombre VARCHAR (18),
-contarseña VARCHAR (200),
+contraseña VARCHAR (200),
 email VARCHAR (200),
 esencias INTEGER,
 fecha_ultimo_login DATE 

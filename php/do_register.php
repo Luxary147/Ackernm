@@ -29,6 +29,8 @@ if (stmt == True) {
   echo ("Funciona");
 }else{
   echo (" casca");
+}
+
 $stmt -> execute();
 $stmt -> close();
   

@@ -25,7 +25,7 @@ $passH = password_hash($_POST['pass'], PASSWORD_BCRYPT);
 echo ($passH);
 $stmt -> bind_param("sss", $nick, $email, $pass);
 
-if (stmt == True) {
+if ($stmt == True) {
   echo ("Funciona");
 }else{
   echo (" casca");

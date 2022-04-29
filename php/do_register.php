@@ -10,9 +10,9 @@ $email = $_POST['email'];
 $pass = $_POST['pass'];
 $pass2 = $_POST['pass2'];
 
-echo ($nick)
-echo ($email)
-echo ($pass)
+echo ($nick);
+echo ($email);
+echo ($pass);
 
 
   if($pass != $pass2){

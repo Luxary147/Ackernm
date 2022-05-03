@@ -21,6 +21,8 @@ echo ("hola");
 
       $only_row = mysqli_fetch_array($result);
 
+    echo (password_verify($password_posted, $only_row[1]));
+    
       if (password_verify($password_posted, $only_row[1])) {
         //Hasta aqui recupera la tuplas donde el email guardado sea igual al email qu nosotros recuperamos de login.php
         //si esa tupla existe y las contraseñas son iguales inicio una sesión

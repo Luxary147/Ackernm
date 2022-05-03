@@ -31,7 +31,7 @@ $sql = "INSERT INTO Tusuario (nick, email, encrypted_password) VALUES  (?, ?, ?)
 $stmt = $db -> prepare($sql);
 $passH = password_hash($_POST['pass'], PASSWORD_BCRYPT);
 echo ($passH);
-$stmt -> bind_param('sss', $nick, $email, $pass);
+$stmt -> bind_param('sss', $nick, $email, $passH);
 
 echo ("hola");
 

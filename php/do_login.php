@@ -10,8 +10,7 @@
   if (mysqli_num_rows($result) > 0) {
      $only_row = mysqli_fetch_array($result);
     
-      //if (password_verify($password_posted, $only_row[1])) {
-    if (password_posted == $only_row[1] ){
+      if (password_verify($password_posted, $only_row[1])) {
           session_start();
           $_SESSION['user_id'] = $only_row[0];
           header("Location: main.php");

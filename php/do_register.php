@@ -24,7 +24,10 @@ $sql = "INSERT INTO Tusuario (nick, email, contraseña) VALUES  (?, ?, ?)";
 $stmt = $db -> prepare($sql);
 $passH = password_hash($_POST['pass'], PASSWORD_BCRYPT);
 $stmt -> bind_param('sss', $nick, $email, $passH);
+
+echo ("bind_param");
 $stmt -> execute();
+echo ("ejecucion");
 $stmt -> close();
   
 

@@ -20,7 +20,7 @@ $pass2 = $_POST['pass2'];
     die("Las contraseñas no coinciden");
   }
 
-$sql = "INSERT INTO Tusuario (nick, contraseña, email) VALUES  (?, ?, ?)";
+$sql = "INSERT INTO Tusuario (nombre, contraseña, email) VALUES  (?, ?, ?)";
 $stmt = $db -> prepare($sql);
 $passH = password_hash($_POST['pass'], PASSWORD_BCRYPT);
 $stmt -> bind_param('sss', $nick, $passH, $email);

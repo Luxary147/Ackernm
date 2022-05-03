@@ -12,7 +12,6 @@ echo ($password_posted);
 echo ($query);
 
   $result = mysqli_query($db, $query) or die('Query error');
-//el fallo que tengo esta en esta linea 
 
 echo ("hola");
 
@@ -31,7 +30,7 @@ echo ("hola");
 
       } else {
 
-          header('Location: login.php?login_failed_password=True');
+          //header('Location: login.php?login_failed_password=True');
           echo 'La contraseña es incorrecta';
 
       }

@@ -25,11 +25,8 @@ $stmt -> execute();
 echo ("ejecucion");
 $stmt -> close();
   
-echo ("Usuario Registrado con exito");
 
-sleep(15);
-
-header("Location: login.php")
+header("Location: UsuarioCreado.php")
 ?>
 
 

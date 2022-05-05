@@ -11,7 +11,25 @@
 
     <body>
         
-        <a class="enlace" href="login.php"> Enlace para el Login </a>
+    <?php
+        
+    session_start();
+        
+    if (empty($_SESSION['user_id'])) {
+    ?>
+        //bloque php donde compruebo si el ususario esta logeado o no 
+        
+        <div class="contenedorLogin">
+            <p>No estás logueado, Inicia Sesión <a href='/login.php'> aquí</a>.</p>
+        </div>
+
+    <?php
+    } else {
+    ?>
+        <div class="main">
+            <p > Estas logueado buen trabajo </p>
+
+        </div>
         
     </body>
 </html>

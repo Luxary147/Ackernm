@@ -15,10 +15,9 @@
         
     session_start();
         
-    if (empty($_SESSION['user_id'])) {
-    ?>
+    if (empty($_SESSION['user_id'])) { 
         //bloque php donde compruebo si el ususario esta logeado o no 
-        
+    ?>
         <div class="contenedorLogin">
             <p>No estás logueado, Inicia Sesión <a href='/login.php'> aquí</a>.</p>
         </div>

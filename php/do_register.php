@@ -26,7 +26,8 @@ echo ("ejecucion");
 $stmt -> close();
   
 
-header("Location: UsuarioCreado.php")
+header("Location: login.php")
+echo ('<p id="mensaje" > Usuario creado Con Exito </p>');
 ?>
 
 

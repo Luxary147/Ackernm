@@ -1,9 +1,4 @@
 <?php
-
-//ini_set('display_errors', 'On');
-//require __DIR__ . '/../php/db_connection.php';
-//$mysqli = get_db_connection_or_die();
-
 $db = mysqli_connect('localhost', 'root', '1234', 'Ackernm') or die('Fail');
 
 if (!$db) {
@@ -30,8 +25,11 @@ $stmt -> execute();
 echo ("ejecucion");
 $stmt -> close();
   
+echo ("Usuario Registrado con exito");
 
-header("Location: register.php")
+sleep(15);
+
+header("Location: login.php")
 ?>
 
 

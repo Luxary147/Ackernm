@@ -2,7 +2,7 @@
 
   echo ('<p id="mensaje" > Usuario creado Con Exito </p>');
 
-  slepp(15);
+  sleep(10);
 
 header("Location: login.php")
   

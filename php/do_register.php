@@ -11,7 +11,7 @@ $email = $_POST['email'];
 $pass = $_POST['pass'];
 $pass2 = $_POST['pass2'];
 
-if ((strlen($pass) > 6 ){
+if (strlen($pass) > 6 ){
     
       if($pass != $pass2){
         die("Las contraseñas no coinciden");

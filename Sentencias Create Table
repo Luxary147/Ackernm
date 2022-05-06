@@ -16,7 +16,8 @@ fecha_ultimo_login DATE
 CREATE TABLE Tcarta(
 id INTEGER PRIMARY KEY AUTO_INCREMENT,
 nombre VARCHAR (30),
-url_imagen VARCHAR (200)
+url_imagen VARCHAR (200),
+essencias INTEGER (15) DEFAULT 300
 );
 
 

@@ -24,4 +24,5 @@
 }else{
     echo ("falla aqui");
   }
+  mysqli_close($db);
 ?>

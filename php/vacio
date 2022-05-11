@@ -51,8 +51,8 @@
       if (mysqli_num_rows($cartas) > 0) {
          $only_row = mysqli_fetch_array($cartas);
          
-         
-         while ($row = mysqli_fetch_array($cartas)){
+         //revisar esta linea
+         while ($only_row = mysqli_fetch_array($cartas)){
             echo "<tr>  
             <td>
                 <div>
@@ -83,7 +83,29 @@
       }
       
       mysqli_close($db);
-     ?>
+      
+      //Hasta aqui seria la parte de recuperar la coleccion completa.
+      //Ahora vendria la parte de recuperar los datos de la tabla Tcartacoleccion , para saber que cartas ya tiene desbloqueada ese usuario
+      
+      
+        $db = mysqli_connect('localhost', 'root', '1234', 'Ackernm') or die('Fail');
+
+ 
+
+          $query2 = "SELECT idCarta FROM TCartaUsuario WHERE idUsuario = '".$_SESSION['user_id']"'";
+          $earned = mysqli_query($db, $query2) or die('Query error');
+
+          if (mysqli_num_rows($earned) > 0) {
+             $Cearn = mysqli_fetch_array($earned);
+
+            while ($Cearn = mysqli_fetch_array($earned)){
+            //para poder realizar esto deberia meter todo el codigo php en la cabecera
+            
+            
+            //preguntar  si se pueden realizar bucles foreach anidados
+            
+              if ( {
+             ?>
         
     </body>
 </html>

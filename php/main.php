@@ -48,9 +48,7 @@
       $cartas = mysqli_query($db, $query) or die('Query error');
       
       /*compruebo si existen cartas*/
-      if (mysqli_num_rows($cartas) > 0) {
-         $only_row = mysqli_fetch_array($cartas);
-         
+      if (mysqli_num_rows($cartas) > 0) {     
       ?>
       <div>
       <?php

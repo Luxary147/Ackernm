@@ -58,7 +58,7 @@
             echo "<div>
                         <img src=".$row[1]." alt=".$row['nombre'].">
                   </div>
-                  <div id="form">
+                  <div>
                       <form action="do_buy_card.php" method="post" id="do_buy_card">
                           <h2>".$row[0]."</h2>
                           <p>".row[2]."</p>

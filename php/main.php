@@ -62,7 +62,6 @@
                       <form>
                           <h2>".$row[0]."</h2>
                           <p>".row[2]."</p>
-                          <input type="submit" value="Comprar">
                       </form>
                   </div>";
             }
@@ -72,7 +71,7 @@
       <?php
       }else{
         echo ("Error al recuperar los datos");
-      //ya que siempre exestiran cartas en la base de datos , por que asi esta definida la coleccion
+      /*ya que siempre exestiran cartas en la base de datos , por que asi esta definida la coleccion*/
       }
       
       mysqli_close($db);

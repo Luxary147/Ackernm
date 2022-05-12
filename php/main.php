@@ -56,7 +56,7 @@
          /*revisar esta linea*/
          while ($only_row = mysqli_fetch_array($cartas)){
             echo "<div>
-                        <img class ="imagen" src="'.$row[1].'" alt="'.$row['nombre'].'">
+                        <img class ="imagen" src=".$row[1]." alt=".$row['nombre'].">
                   </div>
                   <div id="form">
                       <form action="do_buy_card.php" method="post" id="do_buy_card">

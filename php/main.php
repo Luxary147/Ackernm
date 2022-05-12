@@ -34,5 +34,48 @@
            }
      ?>
         
+     <?php
+     
+     $db = mysqli_connect('localhost', 'root', '1234', 'Ackernm') or die('Fail');
+
+      if (!$db) {
+          die("Connection failed: " . mysqli_connect_error());
+      }
+      
+
+      $query = "SELECT nombre, url_imagen, essencias FROM Tcarta" ;
+      $cartas = mysqli_query($db, $query) or die('Query error');
+      
+      /*compruebo si existen cartas*/
+      if (mysqli_num_rows($cartas) > 0) {
+         $only_row = mysqli_fetch_array($cartas);
+         
+      ?>
+      <div>
+      <?php
+         /*revisar esta linea*/
+         while ($only_row = mysqli_fetch_array($cartas)){
+            echo "<div>
+                        <img class ="imagen" src="'.$row[1].'" alt="'.$row['nombre'].'">
+                  </div>
+                  <div id="form">
+                      <form action="do_buy_card.php" method="post" id="do_buy_card">
+                          <h2>".$row[0]."</h2>
+                          <p>".row[2]."</p>
+                          <input type="submit" value="Comprar">
+                      </form>
+                  </div>";
+            }
+          ?>
+         </div>
+         
+      <?php
+      }else{
+        echo ("Error al recuperar los datos");
+      //ya que siempre exestiran cartas en la base de datos , por que asi esta definida la coleccion
+      }
+      
+      mysqli_close($db);
+      ?> 
     </body>
 </html>

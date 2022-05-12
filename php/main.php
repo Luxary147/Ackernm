@@ -56,12 +56,12 @@
          /*revisar esta linea*/
          while ($only_row = mysqli_fetch_array($cartas)){
             echo "<div>
-                        <img src=".$row[1]." alt=".$row['nombre'].">
+                        <img src=".$only_row[1]." alt=".$only_row['nombre'].">
                   </div>
                   <div>
                       <form>
-                          <h2>".$row[0]."</h2>
-                          <p>".$row[2]."</p>
+                          <h2>".$only_row[0]."</h2>
+                          <p>".$only_row[2]."</p>
                       </form>
                   </div>";
             }

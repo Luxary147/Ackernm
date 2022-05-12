@@ -5,6 +5,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="main.css">
         <title>Document</title>
 
     </head>
@@ -55,13 +56,14 @@
       <?php
          /*revisar esta linea*/
          while ($only_row = mysqli_fetch_array($cartas)){
-            echo "<div>
-                        <img src=".$only_row[1]." alt=".$only_row['nombre'].">
+            echo "<div id="carta">
+                        <img class ="imagen" src=".$only_row[1]." alt=".$only_row['nombre'].">
                   </div>
-                  <div>
-                      <form>
+                  <div id="formu">
+                      <form action="do_buy_card.php" method="post" id="do_buy_card">
                           <h2>".$only_row[0]."</h2>
                           <p>".$only_row[2]."</p>
+                          <input type="submit" value="Comprar">
                       </form>
                   </div>";
             }

@@ -55,7 +55,7 @@
             echo '<div id="carta">
                         <img class ="imagen" src="'.$only_row[2].'" alt="'.$only_row[1].'">
                   </div>
-                  <div id="formu">
+                  <div id="formu_'.$only_row[0].'">
                       <form action="do_buy_card.php" method="post" id="do_buy_card">
                           <h2>'.$only_row[1].'</h2>
                           <p>'.$only_row[3].'</p>

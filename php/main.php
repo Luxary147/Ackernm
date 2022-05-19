@@ -42,7 +42,7 @@
       }
       
 
-      $query = "SELECT nombre, url_imagen, essencias FROM Tcarta" ;
+      $query = "SELECT id, nombre, url_imagen, essencias FROM Tcarta" ;
       $cartas = mysqli_query($db, $query) or die('Query error');
       
       /*compruebo si existen cartas*/
@@ -53,12 +53,13 @@
          /*revisar esta linea*/
          while ($only_row = mysqli_fetch_array($cartas)){
             echo '<div id="carta">
-                        <img class ="imagen" src="'.$only_row[1].'" alt="'.$only_row[0].'">
+                        <img class ="imagen" src="'.$only_row[2].'" alt="'.$only_row[1].'">
                   </div>
                   <div id="formu">
                       <form action="do_buy_card.php" method="post" id="do_buy_card">
-                          <h2>'.$only_row[0].'</h2>
-                          <p>'.$only_row[2].'</p>
+                          <h2>'.$only_row[1].'</h2>
+                          <p>'.$only_row[3].'</p>
+                          <input id="'.$only_row[0].'" name="cartaid" type="hidden">
                           <input type="submit" value="Comprar">
                       </form>
                   </div>';

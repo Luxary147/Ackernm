@@ -87,13 +87,15 @@
                     for ($j = 1; $j <= count($Cearn); $j++) {
                         echo ('b');
                         
-                         echo ($only_row[i]);
-                         echo ($Cearn[j]);
+                        echo ($i);
+                         echo ($j);
+                         echo ($only_row[$i]);
+                         echo ($Cearn[$j]);
                 
-                        if ($only_row[i] == $Cearn[j]) {
+                        if ($only_row[$i] == $Cearn[$j]) {
                             
-                        $obtenidas_push($only_row[i]);
-                            echo ($only_row[i]);
+                        $obtenidas_push($only_row[$i]);
+                            echo ($only_row[$i]);
                         }
                      }
                  }

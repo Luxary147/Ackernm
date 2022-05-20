@@ -12,11 +12,6 @@
         
          <?php
         session_start();
-        if (empty($_SESSION['user_id'])) {
-            echo ('hola');
-        }else{
-            echo ('adios');
-        }
         
          $db = mysqli_connect('localhost', 'root', '1234', 'Ackernm') or die('Fail');
           if (!$db) {
@@ -57,7 +52,6 @@
         
         <?php
         
-        session_start();
         if (empty($_SESSION['user_id'])) { 
             //bloque php donde compruebo si el ususario esta logeado o no 
         ?>

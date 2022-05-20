@@ -92,11 +92,11 @@
                          echo ($only_row[$i]);
                          echo ($Cearn[$j]);
                 
-                        if ($only_row[$i] == $Cearn[$j]) {
+                        //if ($only_row[$i] == $Cearn[$j]) {
                             
-                        $obtenidas_push($only_row[$i]);
-                            echo ($only_row[$i]);
-                            echo ('c');
+                        //$obtenidas_push($only_row[$i]);
+                            //echo ($only_row[$i]);
+                            //echo ('c');
                         }
                         echo ('d');
                      }

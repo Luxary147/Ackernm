@@ -47,11 +47,11 @@
 
 
 
-                //$insert= "INSERT INTO TcartaUsuario (idUsuario, idCarta) VALUES  (?, ?)";
-                //$stmt = $db -> prepare($insert);
-                //$stmt -> bind_param('ii', $idUsuario, $idCarta);
-                //$stmt -> execute();
-                //$stmt -> close();
+                $insert= "INSERT INTO TcartaUsuario (idUsuario, idCarta) VALUES  (?, ?)";
+                $stmt = $db -> prepare($insert);
+                $stmt -> bind_param('ii', $idUsuario, $idCarta);
+                $stmt -> execute();
+                $stmt -> close();
              }
           }
 

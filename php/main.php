@@ -84,7 +84,7 @@
 
                 while ($Cearn = mysqli_fetch_array($earned)){
 
-                    for ($only_row = mysqli_fetch_array($cartas)){
+                    while ($only_row = mysqli_fetch_array($cartas)){
 
                         if ($only_row[0] == $Cearn[0]) {
 

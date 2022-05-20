@@ -11,6 +11,12 @@
     <body> 
         
          <?php
+        if (empty($_SESSION['user_id'])) {
+            echo ('hola');
+        }else{
+            echo ('adios');
+        }
+        
          $db = mysqli_connect('localhost', 'root', '1234', 'Ackernm') or die('Fail');
           if (!$db) {
               die("Connection failed: " . mysqli_connect_error());

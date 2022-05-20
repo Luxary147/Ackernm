@@ -99,12 +99,17 @@
              $Cearn = mysqli_fetch_array($earned);
 
             while ($Cearn = mysqli_fetch_array($earned)){
-            //para poder realizar esto deberia meter todo el codigo php en la cabecera
             
+                for ($only_row = mysqli_fetch_array($cartas){
             
-            //preguntar  si se pueden realizar bucles foreach anidados
-            
-              if ( {
+                    if ($only_row[0] == $Cearn[0]) {
+                    
+                    $obtenidas_push($only_row[0])
+                    
+                    
+                    }
+                 }
+             }
              ?>
         
     </body>

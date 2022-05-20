@@ -24,7 +24,7 @@
           if (mysqli_num_rows($esencias) > 0) {
              $Compra = mysqli_fetch_array($esencias);
                   
-                  echo ($Compra);
+                  echo ($Compra[0]);
 
              if ($Compra[0] > 300){
                      echo ($compra[0]);

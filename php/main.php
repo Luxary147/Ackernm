@@ -76,7 +76,7 @@
             </div>
          <?php
             
-          $query2 = "SELECT idCarta FROM TCartaUsuario WHERE idUsuario = '".$_SESSION['user_id']"'";
+          $query2 = "SELECT idCarta FROM TCartaUsuario WHERE idUsuario = '".$_SESSION['user_id']."'";
           $earned = mysqli_query($db, $query2) or die('Query error');
 
               if (mysqli_num_rows($earned) > 0) {

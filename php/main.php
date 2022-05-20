@@ -37,7 +37,7 @@
                           <form action="do_buy_card.php" method="post" id="do_buy_card">
                               <h2>'.$only_row[1].'</h2>
                               <p>'.$only_row[3].'</p>
-                              <input id="'.$only_row[0].'" name="cartaid" type="hidden">
+                              <input id="cartaid" name="cartaid" type="hidden" value="'.$only_row[0].'">
                               <input type="submit" value="Comprar">
                           </form>
                       </div>';

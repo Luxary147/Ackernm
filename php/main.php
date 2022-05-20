@@ -40,7 +40,6 @@
                           </form>
                       </div>';
                 }
-              mysqli_close($db); 
               ?>
              </div>
           <?php
@@ -69,10 +68,9 @@
             </div>
          <?php
             
-          $db2 = mysqli_connect('localhost', 'root', '1234', 'Ackernm') or die('Fail');
-            
           $query2 = "SELECT idCarta FROM TCartaUsuario WHERE idUsuario = '".$_SESSION['user_id']."'";
-          $earned = mysqli_query($db2, $query2) or die('Query error en segunda fase');
+          echo ($query2);
+          $earned = mysqli_query($db, $query2) or die('Query error en segunda fase');
 
               if (mysqli_num_rows($earned) > 0) {
                  $Cearn = mysqli_fetch_array($earned);
@@ -87,7 +85,7 @@
                  }
              }
          }
-         mysqli_close($db2);        
+         mysqli_close($db);        
          ?>
         
     </body>

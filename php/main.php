@@ -26,10 +26,9 @@
           <div id="coleccion">
               
           <?php
-             /*revisar esta linea*/
-              $only_row = mysqli_fetch_array($cartas);
-              echo ('primer comprobacion');
-              echo count($only_row);
+               $coleccion = count(mysqli_fetch_array($cartas));
+              echo ($coleccion);
+              
              while ($only_row = mysqli_fetch_array($cartas)){
                 echo '<div id="carta'.$only_row[0].'">
                             <img class ="imagen" src="'.$only_row[2].'" alt="'.$only_row[1].'">
@@ -47,7 +46,7 @@
              </div>
           <?php
                 echo ('segunda comprobacion');
-              echo count($only_row);
+              echo ($coleccion);
               }else{
                 echo ("Error al recuperar los datos");
               /*ya que siempre exestiran cartas en la base de datos , por que asi esta definida la coleccion*/
@@ -84,7 +83,7 @@
                   
                 //while ($Cearn = mysqli_fetch_array($earned)){
                     echo ('valor');
-                    echo count($only_row);
+                    echo ($coleccion);
                 for ($i = 1; $i <= count($only_row); $i++) {
                     echo ('a');
                     

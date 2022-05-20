@@ -44,6 +44,7 @@
                           </form>
                       </div>';
                 }
+              mysqli_close($db);  
               ?>
              </div>
 
@@ -75,6 +76,7 @@
                 <p > Estas logueado buen trabajo </p>
             </div>
          <?php
+          $db2 = mysqli_connect('localhost', 'root', '1234', 'Ackernm') or die('Fail');
             
           $query2 = "SELECT idCarta FROM TCartaUsuario WHERE idUsuario = '".$_SESSION['user_id']."'";
           $earned = mysqli_query($db, $query2) or die('Query error en segunda fase');
@@ -95,7 +97,7 @@
                  }
              }
          }
-         mysqli_close($db);        
+         mysqli_close($db2);        
          ?>
         
     </body>

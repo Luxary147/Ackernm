@@ -74,14 +74,18 @@
 
               if (mysqli_num_rows($earned) > 0) {
                  $Cearn = mysqli_fetch_array($earned);
-                  echo ('a');
+
                   echo count($Cearn);
-                  echo ($Cearn);
-                while ($Cearn = mysqli_fetch_array($earned)){
-                    while ($only_row = mysqli_fetch_array($cartas)){
-                        if ($only_row[0] == $Cearn[0]) {
-                        $obtenidas_push($only_row[0]);
-                            echo ($only_row[0]);
+                  
+                //while ($Cearn = mysqli_fetch_array($earned)){
+                    
+                for ($i = 1; $i <= count($only_row); $i++) {
+                    for ($j = 1; $i <= count($Cearn); $i++) {
+                
+                        if ($only_row[i] == $Cearn[j]) {
+                            
+                        $obtenidas_push($only_row[i]);
+                            echo ($only_row[i]);
                         }
                      }
                  }

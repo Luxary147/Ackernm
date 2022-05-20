@@ -68,7 +68,7 @@
             </div>
          <?php
             
-          $query2 = "SELECT idCarta FROM TCartaUsuario WHERE idUsuario = '".$_SESSION['user_id']."'";
+          $query2 = "SELECT idCarta FROM TcartaUsuario WHERE idUsuario = '".$_SESSION['user_id']."'";
           echo ($query2);
           $earned = mysqli_query($db, $query2) or die('Query error en segunda fase');
 

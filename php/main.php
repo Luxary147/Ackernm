@@ -27,6 +27,8 @@
               
           <?php
                $coleccion = count($cartas);
+              echo ('cartas');
+              echo ($cartas);
               echo ($coleccion);
               
              while ($only_row = mysqli_fetch_array($cartas)){

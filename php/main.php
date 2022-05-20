@@ -79,6 +79,9 @@
 
                   echo count($Cearn);
                   
+                  echo ($Cearn[0]);
+                  echo ($Cearn[1]);
+                  
                 //while ($Cearn = mysqli_fetch_array($earned)){
 
                 for ($i = 1; $i <= $coleccion; $i++) {

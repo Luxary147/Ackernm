@@ -16,8 +16,8 @@
                 echo ('valorUsuario');
                 echo ($idUsuario);
 
-        $query = "SELECT essencias FROM Tusuario WHERE id = '".$_SESSION['user_id']."'";
-        $esencias= mysqli_query($db, $query) or die('Query error');
+        $query2 = "SELECT essencias FROM Tusuario WHERE id = '".$_SESSION['user_id']."'";
+        $esencias= mysqli_query($db, $query2) or die('Query error');
                 
                 echo ($query);
 
@@ -35,9 +35,16 @@
 
                 $essent = $Compra[0] - $coste;
                      
-                 echo ( $essent);
+                echo ( $essent);
 
                 $update = "UPDATE Tusuario SET essencias ='".$essent."'WHERE id ='".$_SESSION['user_id']."'";
+                 
+                 if ($db->query($update) === TRUE) {
+                          echo "Update realizada con exito ";      
+                 }else {
+                                echo "Fallo ";
+                 }
+
 
 
                 //$insert= "INSERT INTO TcartaUsuario (idUsuario, idCarta) VALUES  (?, ?)";

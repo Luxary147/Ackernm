@@ -25,12 +25,12 @@
                 //Esto esta hecho de esta manera para que en el caso de que proximamente se quiero modificar el código sea mas sencillo
                 //Esto esta pensado para modificarlo en el futuro , en caso de implementar diferentes valores de essencias , dependiendo de la rareza de la carta.
                 //Actualmente todas valen por defecto 300 
-                $coste = 300
+                $coste = 300;
 
-                $essent = $Compra[0] - $coste
+                $essent = $Compra[0] - $coste;
                  echo ( $essent);
 
-                //$update = "UPDATE Tusuario SET essencias ='".$essent."'WHERE id ='".$_SESSION['user_id']"'";
+                //$update = "UPDATE Tusuario SET essencias ='".$essent."'WHERE id ='".$_SESSION['user_id']."'";
 
 
                 //$insert= "INSERT INTO TcartaUsuario (idUsuario, idCarta) VALUES  (?, ?)";

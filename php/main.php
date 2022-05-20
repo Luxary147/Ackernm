@@ -27,6 +27,7 @@
               
           <?php
              /*revisar esta linea*/
+              $only_row = mysqli_fetch_array($cartas);
               echo ('primer comprobacion');
               echo count($only_row);
              while ($only_row = mysqli_fetch_array($cartas)){

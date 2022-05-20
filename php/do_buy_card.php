@@ -8,10 +8,12 @@
 
         //recupero la información del input del formulario 
         $idCarta = $_POST['cartaid'];
+                echo ('valorCarta');
                 echo ($idCarta);
 
         //almaceno el id del usuario logeado
         $idUsuario = $_SESSION['user_id'];
+                echo ('valorUsuario');
                 echo ($idUsuario);
 
         $query = "SELECT essencias FROM Tusuario WHERE id = '".$_SESSION['user_id']."'";

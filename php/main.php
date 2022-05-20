@@ -77,7 +77,7 @@
          <?php
             
           $query2 = "SELECT idCarta FROM TCartaUsuario WHERE idUsuario = '".$_SESSION['user_id']."'";
-          $earned = mysqli_query($db, $query2) or die('Query error');
+          $earned = mysqli_query($db, $query2) or die('Query error en segunda fase');
 
               if (mysqli_num_rows($earned) > 0) {
                  $Cearn = mysqli_fetch_array($earned);

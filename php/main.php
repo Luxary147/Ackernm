@@ -39,14 +39,12 @@
                               <input type="submit" value="Comprar">
                           </form>
                       </div>';
-                 //es una forma cutre pero a lo mejor funciona
+                 //es una forma cutre pero a lo mejor funciona, esto nos almacenara la cantidad de cartas que hay en nuestra colección
                  $coleccion = $coleccion +1;
                 }
               ?>
              </div>
           <?php
-                echo ('segunda comprobacion');
-              echo ($coleccion);
               }else{
                 echo ("Error al recuperar los datos");
               /*ya que siempre exestiran cartas en la base de datos , por que asi esta definida la coleccion*/
@@ -82,9 +80,8 @@
                   echo count($Cearn);
                   
                 //while ($Cearn = mysqli_fetch_array($earned)){
-                    echo ('valor');
-                    echo ($coleccion);
-                for ($i = 1; $i <= count($only_row); $i++) {
+
+                for ($i = 1; $i <= $coleccion; $i++) {
                     echo ('a');
                     
                     for ($j = 1; $j <= count($Cearn); $j++) {

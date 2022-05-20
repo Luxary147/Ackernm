@@ -72,10 +72,12 @@
 
               if (mysqli_num_rows($earned) > 0) {
                  $Cearn = mysqli_fetch_array($earned);
+                  echo count($Cearn);
                 while ($Cearn = mysqli_fetch_array($earned)){
                     while ($only_row = mysqli_fetch_array($cartas)){
                         if ($only_row[0] == $Cearn[0]) {
                         $obtenidas_push($only_row[0]);
+                            echo ($only_row[0]);
                         }
                      }
                  }

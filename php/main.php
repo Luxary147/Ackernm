@@ -27,6 +27,8 @@
               
           <?php
              /*revisar esta linea*/
+              echo ('primer comprobacion');
+              echo count($only_row);
              while ($only_row = mysqli_fetch_array($cartas)){
                 echo '<div id="carta'.$only_row[0].'">
                             <img class ="imagen" src="'.$only_row[2].'" alt="'.$only_row[1].'">
@@ -43,6 +45,8 @@
               ?>
              </div>
           <?php
+                echo ('segunda comprobacion');
+              echo count($only_row);
               }else{
                 echo ("Error al recuperar los datos");
               /*ya que siempre exestiran cartas en la base de datos , por que asi esta definida la coleccion*/

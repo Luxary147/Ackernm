@@ -1,5 +1,3 @@
-USE Ackernm ;
-
 INSERT INTO Tcarta (nombre , url_imagen) VALUES ( Mage , https://raw.githubusercontent.com/Luxary147/Ackernm/main/raw/Mago_TradingCard(common).png );
 
 INSERT INTO Tcarta (nombre , url_imagen) VALUES ( Hunter , https://raw.githubusercontent.com/Luxary147/Ackernm/main/raw/Hunter_TradingCard%20(common).png);

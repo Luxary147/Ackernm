@@ -26,7 +26,7 @@
           <div id="coleccion">
               
           <?php
-               $coleccion = count(mysqli_fetch_array($cartas));
+               $coleccion = count($cartas);
               echo ($coleccion);
               
              while ($only_row = mysqli_fetch_array($cartas)){

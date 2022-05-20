@@ -18,6 +18,8 @@
 
         $query = "SELECT essencias FROM Tusuario WHERE id = '".$_SESSION['user_id']."'";
         $esencias= mysqli_query($db, $query) or die('Query error');
+                
+                echo ($query);
 
           if (mysqli_num_rows($esencias) > 0) {
              $Compra = mysqli_fetch_array($esencias);

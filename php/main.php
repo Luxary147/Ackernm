@@ -78,7 +78,8 @@
                   echo count($Cearn);
                   
                 //while ($Cearn = mysqli_fetch_array($earned)){
-                    
+                    echo ('valor');
+                    echo count($only_row);
                 for ($i = 1; $i <= count($only_row); $i++) {
                     echo ('a');
                     

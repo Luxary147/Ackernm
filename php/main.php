@@ -26,10 +26,6 @@
           <div id="coleccion">
               
           <?php
-               $coleccion = count($cartas);
-              echo ('cartas');
-              echo ($cartas);
-              echo ($coleccion);
               
              while ($only_row = mysqli_fetch_array($cartas)){
                 echo '<div id="carta'.$only_row[0].'">
@@ -43,9 +39,9 @@
                               <input type="submit" value="Comprar">
                           </form>
                       </div>';
+                 //es una forma cutre pero a lo mejor funciona
+                 $coleccion = $coleccion +1
                 }
-              echo ('mirar');
-              echo count($only_row);
               ?>
              </div>
           <?php

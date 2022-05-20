@@ -14,7 +14,7 @@
         $idUsuario = $_SESSION['user_id'];
                 echo ($idUsuario);
 
-        $query = "SELECT essencias FROM Tusuario WHERE id = '".$_SESSION['user_id']"'";
+        $query = "SELECT essencias FROM Tusuario WHERE id = '".$_SESSION['user_id']."'";
         $esencias= mysqli_query($db, $query) or die('Query error');
 
           if (mysqli_num_rows($esencias) > 0) {

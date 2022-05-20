@@ -40,7 +40,7 @@
                           </form>
                       </div>';
                  //es una forma cutre pero a lo mejor funciona
-                 $coleccion = $coleccion +1
+                 $coleccion = $coleccion +1;
                 }
               ?>
              </div>

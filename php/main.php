@@ -96,8 +96,11 @@
                             
                         $obtenidas_push($only_row[$i]);
                             echo ($only_row[$i]);
+                            echo ('c');
                         }
+                        echo ('d');
                      }
+                    echo ('e');
                  }
              }
          }

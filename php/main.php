@@ -42,6 +42,8 @@
                           </form>
                       </div>';
                 }
+              echo ('mirar');
+              echo count($only_row);
               ?>
              </div>
           <?php

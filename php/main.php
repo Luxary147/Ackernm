@@ -81,6 +81,8 @@
                   
                   echo ($Cearn[0]);
                   echo ($Cearn[1]);
+                  echo ($Cearn[2]);
+                  echo ($Cearn[3]);
                   
                   echo '<br>';
                   

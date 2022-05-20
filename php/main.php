@@ -80,7 +80,12 @@
                 //while ($Cearn = mysqli_fetch_array($earned)){
                     
                 for ($i = 1; $i <= count($only_row); $i++) {
-                    for ($j = 1; $i <= count($Cearn); $i++) {
+                    
+                    
+                    for ($j = 1; $j <= count($Cearn); $j++) {
+                        
+                         echo ($only_row[i]);
+                         echo ($Cearn[j]);
                 
                         if ($only_row[i] == $Cearn[j]) {
                             

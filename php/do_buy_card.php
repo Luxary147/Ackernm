@@ -7,7 +7,7 @@
         $db = mysqli_connect('localhost', 'root', '1234', 'Ackernm') or die('Fail');
 
         //recupero la información del input del formulario 
-        $idCarta = $_POST['cartaid'];
+        $idCarta = $_POST['2'];
                 echo ('valorCarta');
                 echo ($idCarta);
 

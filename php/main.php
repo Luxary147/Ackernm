@@ -26,7 +26,7 @@
           <div id="coleccion">
               
           <?php
-              $Tcartas = array[];
+              $Tcartas = [];
              while ($only_row = mysqli_fetch_array($cartas)){
                  array_push($Tcartas, .$only_row[0].);
                 echo '<div id="carta'.$only_row[0].'">

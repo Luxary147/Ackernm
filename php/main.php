@@ -26,8 +26,9 @@
           <div id="coleccion">
               
           <?php
-              
+              $Tcartas = array[];
              while ($only_row = mysqli_fetch_array($cartas)){
+                 array_push($Tcartas, .$only_row[0].);
                 echo '<div id="carta'.$only_row[0].'">
                             <img class ="imagen" src="'.$only_row[2].'" alt="'.$only_row[1].'">
                       </div>
@@ -76,15 +77,6 @@
 
               if (mysqli_num_rows($earned) > 0) {
                  $Cearn = mysqli_fetch_array($earned);
-
-                  echo count($Cearn);
-                  
-                  echo ($Cearn[0]);
-                  echo ($Cearn[1]);
-                  echo ($Cearn[2]);
-                  echo ($Cearn[3]);
-                  
-                  echo '<br>';
                   
                 //while ($Cearn = mysqli_fetch_array($earned)){
 
@@ -105,13 +97,13 @@
                             //echo ($only_row[$i]);
                             //echo ('c');
                         //}
-                        echo ('d');
                      }
-                    echo ('e');
                  }
              }
          }
-         mysqli_close($db);        
+         mysqli_close($db);   
+         print_r($Tcartas);
+         print_r($Cearn);
          ?>
         
     </body>

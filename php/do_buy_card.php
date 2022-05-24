@@ -12,7 +12,7 @@
         //almaceno el id del usuario logeado
         $idUsuario = $_SESSION['user_id'];
 
-        $query2 = "SELECT essencias FROM Tusuario WHERE id = '".$_SESSION['user_id']."'";
+        $query2 = "SELECT esencias FROM Tusuario WHERE id = '".$_SESSION['user_id']."'";
         $esencias= mysqli_query($db, $query2) or die('Query error');
                 
 
@@ -29,7 +29,7 @@
                 $essent = $Compra[0] - $coste;
                      
 
-                $update = "UPDATE Tusuario SET essencias ='".$essent."'WHERE id ='".$_SESSION['user_id']."'";
+                $update = "UPDATE Tusuario SET esencias ='".$essent."'WHERE id ='".$_SESSION['user_id']."'";
                  
                  if ($db->query($update) === TRUE) {
                           echo "Update realizada con exito ";      

@@ -32,7 +32,7 @@
                 echo '<div id="carta'.$only_row[0].'">
                             <img class ="imagen" src="'.$only_row[2].'" alt="'.$only_row[1].'">
                       </div>
-                      <div id="formu_'.$only_row[0].'">
+                      <div id="formu1">
                           <form action="do_buy_card.php" method="post" id="do_buy_card">
                               <h2>'.$only_row[1].'</h2>
                               <p>'.$only_row[3].'</p>
@@ -71,34 +71,15 @@
             </div>
          <?php
             
-          $query2 = "SELECT idCarta FROM TcartaUsuario WHERE idUsuario = '".$_SESSION['user_id']."'";
-          echo ($query2);
+          $query2 = "SELECT TcartaUsuario.idCarta FROM TcartaUsuario INNER JOIN Tcartas ON TcartasUsuario.id = Tcarta.id;
           $earned = mysqli_query($db, $query2) or die('Query error en segunda fase');
 
               if (mysqli_num_rows($earned) > 0) {
                  $Cearn = mysqli_fetch_array($earned);
+                 
+                 echo ($query2);
+                 echo ($Cearn);
                   
-                //while ($Cearn = mysqli_fetch_array($earned)){
-
-                for ($i = 1; $i <= $coleccion; $i++) {
-                    echo ('a');
-                    
-                    for ($j = 1; $j <= count($Cearn); $j++) {
-                        echo ('b');
-                        
-                        echo ($i);
-                         echo ($j);
-                         echo ($only_row[$i]);
-                         echo ($Cearn[$j]);
-                
-                        //if ($only_row[$i] == $Cearn[$j]) {
-                            
-                        //$obtenidas_push($only_row[$i]);
-                            //echo ($only_row[$i]);
-                            //echo ('c');
-                        //}
-                     }
-                 }
              }
          }
          mysqli_close($db);   

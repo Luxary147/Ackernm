@@ -71,7 +71,7 @@
             </div>
          <?php
             
-          $query2 = "SELECT TcartaUsuario.idCarta FROM TcartaUsuario INNER JOIN Tcarta ON TcartasUsuario.idCarta = Tcarta.id";
+          $query2 = "SELECT TcartaUsuario.idUsuario FROM TcartaUsuario INNER JOIN Tcarta ON TcartasUsuario.idCarta = Tcarta.id";
           $earned = mysqli_query($db, $query2) or die('Query error en segunda fase');
 
               if (mysqli_num_rows($earned) > 0) {

@@ -7,44 +7,71 @@
         $db = mysqli_connect('localhost', 'root', '1234', 'Ackernm') or die('Fail');
 
         //recupero la información del input del formulario 
-        $esencias = $_POST['pago'];
+        $apuesta = $_POST['pago'];
 
         //almaceno el id del usuario logeado
         $idUsuario = $_SESSION['user_id'];
+                
+        $Ndado = $_POST['numero'];
+                
+        $query2 = "SELECT esencias FROM Tusuario WHERE id = '".$_SESSION['user_id']."'";
+        $esencias= mysqli_query($db, $query2) or die('Query error');
+                
 
-         
-        if()
-        switch ($i) {
-            case 1:
-                $esencias = 0;
-                break;
-            case 2:
-                $esencias = $esencias/3;
-                break;
-            case 3:
-                $esencias = $esencias/2;
-                break;
-            case 4:
-                $esencias = $esencias * 1.25;
-                break;
-            case 5:
-                $esencias = $esencias * 1.5:
-                break;
-            case 6:
-                $esencias = $esencias *3;
-                break;
+          if (mysqli_num_rows($esencias) > 0) {
+             $Compra = mysqli_fetch_array($esencias);
+
+             //este es el numero de essencias del usuario 
+             echo ($Compra);
+                  
+
+             if ($Compra[0] >= $apuesta){
+
+        
+                switch ($Ndado) {
+                    case 1:
+                        $apuesta = 0;
+                        break;
+                    case 2:
+                        $apuesta = $apuesta/3;
+                        break;
+                    case 3:
+                        $apuesta = $apuesta/2;
+                        break;
+                    case 4:
+                        $apuesta = $apuesta * 1.25;
+                        break;
+                    case 5:
+                        $apuesta = $apuesta * 1.5:
+                        break;
+                    case 6:
+                        $apuesta = $apuesta *3;
+                        break;
+                        }
+                
+            
+                //Aqui se va a redondear el valor de esencias para que no nos almacene numeros decimales          
+                $apuesta = round($apuesta);
+
+                //Aqui guardaremos el valor total de las essencias del usuario mas sus ganacnias tras la apuesta
+                $essent = $Compra[0] + $apuesta
+
+                $update = "UPDATE Tusuario SET esencias ='".$essent."'WHERE id ='".$_SESSION['user_id']."'";
+                  
+                  }else{
+                          echo ' <p> No Dispone de las sufiecientes essecias para apostar dicha cantidad </p>';
+                  }
+                
+        }else{
+                //Este error nunca deberia de saltar , pero nunca se sabe asi que aqui esta ( a mi me salio)
+                echo '<p> Este usuario no dispone de ningun valor de esencias en la base de datos </p>'
+        }
+
+                if ($db->query($update) === TRUE) {
+                    echo "Añadido el resultado correctamente ";      
+                }else {
+                    echo "Fallo ";
                 }
-        }
-        //Aqui se va a redondear el valor de esencias para que no nos almacene numeros decimales          
-        $esencias = round($esencias);
-
-        $update = "UPDATE Tusuario SET esencias ='".$essent."'WHERE id ='".$_SESSION['user_id']."'";
-                 
-        if ($db->query($update) === TRUE) {
-            echo "Añadido el resultado correctamente ";      
-        }else {
-            echo "Fallo ";
-        }
 
 
         } else {

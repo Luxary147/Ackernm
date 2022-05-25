@@ -9,6 +9,12 @@
     </head>
     
     <body> 
+        <nav>
+            <ul>
+                <a href="?main=colecion"><li> Colección </li></a>
+                <a href="?main=dado"><li> Tirada </li></a>
+            </ul>
+        </nav>
         
          <?php
         session_start();

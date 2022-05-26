@@ -40,7 +40,7 @@
                  
                  if ($only_row[4] != NULL){
                      
-                     echo '<div id="carta'.$only_row[0].'">
+                     echo '<div id="cartaOb'.$only_row[0].'">
                             <img class ="imagen" src="'.$only_row[2].'" alt="'.$only_row[1].'">
                             </div>';
                      

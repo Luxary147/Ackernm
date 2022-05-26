@@ -48,7 +48,7 @@
                      //He convertido las carta las carta que no tenemos en nuestra colección en botones , con los que puedes interactuar desde php
                      //A mayores he convertido el formulario , para que me envie los datos a la pagina de Detalle de la carta , sin que este muestre nada en main.php
                    ?>
-                  <button id="carta" onclick="location.href='C_detail.php'" input type="submit">
+                  <button id="carta" onclick="location.href='C_detail.php'" type="submit">
                    <?php
                     echo '<div>
                             <img class ="imagenalfa" src="'.$only_row[2].'" alt="'.$only_row[1].'">

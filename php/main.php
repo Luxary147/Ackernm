@@ -23,9 +23,12 @@
           if (!$db) {
               die("Connection failed: " . mysqli_connect_error());
           }
-          $query = "SELECT id, nombre, url_imagen, essencias FROM Tcarta" ;
+        
+        
+          $query = "SELECT id, nombre, url_imagen, essencias , idUsuario FROM Tcarta LEFT JOIN TcartaUsuario ON Tcarta.id = TcartaUsuario.idCarta" ;
           $cartas = mysqli_query($db, $query) or die('Query error');
           /*compruebo si existen cartas*/
+        
           if (mysqli_num_rows($cartas) > 0) {     
           ?>
         
@@ -34,7 +37,7 @@
           <?php
               $Tcartas = [];
              while ($only_row = mysqli_fetch_array($cartas)){
-                 array_push($Tcartas, $only_row[0]);
+                 array_push($Tcartas, $only_row[0], $only_row[1], $only_row[2], $only_row[3],$only_row[4]);
                 echo '<div id="carta'.$only_row[0].'">
                             <img class ="imagen" src="'.$only_row[2].'" alt="'.$only_row[1].'">
                       </div>
@@ -77,16 +80,6 @@
             </div>
          <?php
             
-          $query2 = "SELECT TcartaUsuario.idUsuario FROM TcartaUsuario INNER JOIN Tcarta ON TcartasUsuario.idCarta = Tcarta.id";
-          $earned = mysqli_query($db, $query2) or die('Query error en segunda fase');
-
-              if (mysqli_num_rows($earned) > 0) {
-                 $Cearn = mysqli_fetch_array($earned);
-                 
-                 echo ($query2);
-                 echo ($Cearn);
-                  
-             }
          }
          mysqli_close($db);   
          print_r($Tcartas);

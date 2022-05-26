@@ -29,7 +29,7 @@
         }else{
             
             echo '<div class="contenedorLogin">
-                      <p>No estás logueado, Inicia Sesión <a href='/login.php'> aquí</a>.</p>
+                      <p>No estás logueado, Inicia Sesión <a href="/login.php"> aquí</a></p>
                   </div>';
                 
         }

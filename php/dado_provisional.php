@@ -7,7 +7,8 @@
         $db = mysqli_connect('localhost', 'root', '1234', 'Ackernm') or die('Fail');
 
         //recupero la información del input del formulario 
-        $apuesta = $_POST['pago'];
+        $pago = $_POST['pago'];
+        $apuesta = $pago;
 
         //almaceno el id del usuario logeado
         $idUsuario = $_SESSION['user_id'];
@@ -54,7 +55,7 @@
                 $apuesta = round($apuesta);
 
                 //Aqui guardaremos el valor total de las essencias del usuario mas sus ganacnias tras la apuesta
-                $essent = $Compra[0] + $apuesta
+                $essent = ($Compra[0] - $pago) + $apuesta
 
                 $update = "UPDATE Tusuario SET esencias ='".$essent."'WHERE id ='".$_SESSION['user_id']."'";
                   

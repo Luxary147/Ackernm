@@ -63,7 +63,7 @@
                                 </form>
                             </div>';
                            ?>
-                  </button>';
+                  </button>
               <?php
                  }            
                 }

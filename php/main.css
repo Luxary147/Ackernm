@@ -1,5 +1,8 @@
         .imagen{
             width: 250px;
+            box-shadow: 10px 10px 20px;
+            border-radius: 10px;
+            border: 2px goldenrod solid;
         }
 
         #carta{
@@ -16,7 +19,6 @@
         }
 
         div[id^='formu']{
-            display: none;
             margin-left: 3%;
             text-align:center;
             align-items: center;

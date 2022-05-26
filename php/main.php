@@ -38,7 +38,7 @@
              while ($only_row = mysqli_fetch_array($cartas)){
                  array_push($Tcartas, $only_row[0], $only_row[1], $only_row[2], $only_row[3],$only_row[4]);
                  
-                 if ($only_row[0] != NULL){
+                 if ($only_row[4] != NULL){
                      
                      echo '<div id="carta'.$only_row[0].'">
                             <img class ="imagen" src="'.$only_row[2].'" alt="'.$only_row[1].'">
@@ -90,6 +90,7 @@
             
          }
          mysqli_close($db);   
+         print_r($cartas);
          ?>
         
     </body>

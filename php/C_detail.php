@@ -18,17 +18,19 @@
         $idUsuario = $_SESSION['user_id'];
 
           
-        echo '<div id="carta">
-                    <img class ="imagenalfa" src="'.$urlimagen.'" alt="'.$nombreCarta.'">
-              </div>
+        echo '<div id="pagina">
+                  <div id="carta">
+                        <img class ="imagenalfa" src="'.$urlimagen.'" alt="'.$nombreCarta.'">
+                  </div>
 
-              <div id="formu">
-                    <form action="do_buy_card.php" method="post" id="do_buy_card">
-                        <h2>'.$nombreCarta.'</h2>
-                        <p>'.$costeEssencias.'</p>
-                        <input id="cartaid" name="cartaid" type="hidden" value="'.$idCarta.'">
-                        <input type="submit" value="Comprar">
-                    </form>
+                  <div id="formu">
+                        <form action="do_buy_card.php" method="post" id="do_buy_card">
+                            <h2>'.$nombreCarta.'</h2>
+                            <p>'.$costeEssencias.'</p>
+                            <input id="cartaid" name="cartaid" type="hidden" value="'.$idCarta.'">
+                            <input type="submit" value="Comprar">
+                        </form>
+                   </div>
                </div>';
             
         }else{

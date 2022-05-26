@@ -8,6 +8,11 @@
         $nombreCarta = $_POST['cartanombre'];
         $urlimagen = $_POST['cartaurl'];
         $costeEssencias = $_POST['cartaessencias'];
+                
+        echo ($idCarta);
+                echo ($nombreCarta);
+                echo ($urlimagen);
+                echo ($costeEssencias);
 
         //almaceno el id del usuario logeado
         $idUsuario = $_SESSION['user_id'];

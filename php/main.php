@@ -47,24 +47,21 @@
                  }else{
                      //He convertido las carta las carta que no tenemos en nuestra colección en botones , con los que puedes interactuar desde php
                      //A mayores he convertido el formulario , para que me envie los datos a la pagina de Detalle de la carta , sin que este muestre nada en main.php
-                   ?>
-                  <button id="carta" onclick="location.href='C_detail.php'" type="submit">
-                   <?php
-                    echo '<div>
-                            <img class ="imagenalfa" src="'.$only_row[2].'" alt="'.$only_row[1].'">
-                          </div>
-
-                           <div id="formu">
+                  
+                    echo '<div id="formu">
                                <form action="C_detail.php" method="post" id="C_detail">
                                       <input id="cartaid" name="cartaid" type="hidden" value="'.$only_row[0].'">
                                       <input id="cartanombre" name="cartanombre" type="hidden" value="'.$only_row[1].'">
                                       <input id="cartaurl" name="cartaurl" type="hidden" value="'.$only_row[2].'">
                                       <input id="cartaessencias" name="cartaessencias" type="hidden" value="'.$only_row[3].'">
+                                      <button id="carta" onclick="location.href=C_detail.php" type="submit">
+                                               <div>
+                                                    <img class ="imagenalfa" src="'.$only_row[2].'" alt="'.$only_row[1].'">
+                                              </div>
+                                      </button>
                                 </form>
                             </div>';
-                           ?>
-                  </button>
-              <?php
+
                  }            
                 }
               ?>

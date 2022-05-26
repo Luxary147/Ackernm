@@ -54,7 +54,7 @@
                                       <input id="cartanombre" name="cartanombre" type="hidden" value="'.$only_row[1].'">
                                       <input id="cartaurl" name="cartaurl" type="hidden" value="'.$only_row[2].'">
                                       <input id="cartaessencias" name="cartaessencias" type="hidden" value="'.$only_row[3].'">
-                                      <button id="carta" onclick="location.href=C_detail.php" type="submit">
+                                      <button id="boton" onclick="location.href=C_detail.php" type="submit">
                                                <div>
                                                     <img class ="imagenalfa" src="'.$only_row[2].'" alt="'.$only_row[1].'">
                                               </div>

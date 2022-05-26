@@ -25,7 +25,7 @@
           }
         
         
-          $query = "SELECT id, nombre, url_imagen, essencias , idUsuario FROM Tcarta LEFT JOIN TcartaUsuario ON Tcarta.id = TcartaUsuario.idCarta" ;
+          $query = "SELECT Tcarta.id, nombre, url_imagen, essencias , idUsuario FROM Tcarta LEFT JOIN TcartaUsuario ON Tcarta.id = TcartaUsuario.idCarta" ;
           $cartas = mysqli_query($db, $query) or die('Query error');
           /*compruebo si existen cartas*/
         

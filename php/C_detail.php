@@ -31,7 +31,7 @@
           
         echo '<div id="pagina">
                   <div id="carta">
-                        <img class ="imagenalfa" src="'.$urlimagen.'" alt="'.$nombreCarta.'">
+                        <img class ="imagen" src="'.$urlimagen.'" alt="'.$nombreCarta.'">
                   </div>
 
                   <div id="formu">

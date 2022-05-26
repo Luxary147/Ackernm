@@ -9,7 +9,7 @@
     </head>
     
     <body> 
-        <nav>
+        <nav class="selecciones">
             <ul>
                 <a href="?main=colecion"><li> Colección </li></a>
                 <a href="?main=dado"><li> Tirada </li></a>

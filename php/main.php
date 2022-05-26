@@ -40,14 +40,14 @@
                  
                  if ($only_row[4] != NULL){
                      
-                     echo '<div id="cartaOb'.$only_row[0].'">
+                     echo '<div id="carta'.$only_row[0].'">
                             <img class ="imagen" src="'.$only_row[2].'" alt="'.$only_row[1].'">
                             </div>';
                      
                  }else{
                      
                       echo '<div id="carta'.$only_row[0].'">
-                                <img class ="imagen" src="'.$only_row[2].'" alt="'.$only_row[1].'">
+                                <img class ="imagenalfa" src="'.$only_row[2].'" alt="'.$only_row[1].'">
                           </div>
                           <div id="formu1">
                               <form action="do_buy_card.php" method="post" id="do_buy_card">

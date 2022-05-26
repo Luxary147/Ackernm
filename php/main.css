@@ -1,3 +1,43 @@
+        /* Estilos para la forma en la que se muestra la colección*/
+        .selecciones{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            border-radius: 10px;
+        }
+
+        .selecciones > ul > a{
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            margin: auto;
+            width:650px;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        ul{
+            margin-left: -4%;
+            list-style:none;
+        }
+
+        li{
+            border: 2px solid black;
+            padding: 10px;
+            margin-right: 2%;
+            border-radius: 10px;
+        }
+
+        #coleccion{
+            margin-left: 6%;
+            display:grid;
+            grid-template-columns: 25% 25% 25% 25%;
+        }
+
+
+/* CSS para una optima visualizacion de la cartas*/
         .imagen{
             width: 250px;
             box-shadow: 10px 10px 20px;
@@ -18,13 +58,14 @@
             filter: grayscale(100%);
         }
 
-        div[id^='formu']{
+        /*div[id^='formu']{
             margin-left: 3%;
             text-align:center;
             align-items: center;
-        }
+        }*/
 
         #formu form{
+            display: none;
             border:1px solid black;
             width: 175px;
             height: 125px;
@@ -36,7 +77,3 @@
             text-decoration: underline;
         }
 
-
-        #carta:hover #formu{
-            display: flex;
-        }

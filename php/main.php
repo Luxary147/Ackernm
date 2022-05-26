@@ -64,8 +64,10 @@
                             </div>';
                            ?>
                   </button>';
+              <?php
                  }            
                 }
+              ?>
              </div>
           <?php
               }else{

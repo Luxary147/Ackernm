@@ -27,7 +27,6 @@
         
           $query = "SELECT Tcarta.id, nombre, url_imagen, essencias , idUsuario FROM Tcarta LEFT JOIN TcartaUsuario ON Tcarta.id = TcartaUsuario.idCarta" ;
           $cartas = mysqli_query($db, $query) or die('Query error');
-          /*compruebo si existen cartas*/
         
           if (mysqli_num_rows($cartas) > 0) {     
           ?>
@@ -38,19 +37,28 @@
               $Tcartas = [];
              while ($only_row = mysqli_fetch_array($cartas)){
                  array_push($Tcartas, $only_row[0], $only_row[1], $only_row[2], $only_row[3],$only_row[4]);
-                echo '<div id="carta'.$only_row[0].'">
+                 
+                 if ($only_row[0] != NULL){
+                     
+                     echo '<div id="carta'.$only_row[0].'">
                             <img class ="imagen" src="'.$only_row[2].'" alt="'.$only_row[1].'">
-                      </div>
-                      <div id="formu1">
-                          <form action="do_buy_card.php" method="post" id="do_buy_card">
-                              <h2>'.$only_row[1].'</h2>
-                              <p>'.$only_row[3].'</p>
-                              <input id="cartaid" name="cartaid" type="hidden" value="'.$only_row[0].'">
-                              <input type="submit" value="Comprar">
-                          </form>
-                      </div>';
-                 //es una forma cutre pero a lo mejor funciona, esto nos almacenara la cantidad de cartas que hay en nuestra colección
-                 $coleccion = $coleccion +1;
+                            </div>';
+                     
+                 }else{
+                     
+                      echo '<div id="carta'.$only_row[0].'">
+                                <img class ="imagen" src="'.$only_row[2].'" alt="'.$only_row[1].'">
+                          </div>
+                          <div id="formu1">
+                              <form action="do_buy_card.php" method="post" id="do_buy_card">
+                                  <h2>'.$only_row[1].'</h2>
+                                  <p>'.$only_row[3].'</p>
+                                  <input id="cartaid" name="cartaid" type="hidden" value="'.$only_row[0].'">
+                                  <input type="submit" value="Comprar">
+                              </form>
+                          </div>';
+                 }
+             
                 }
               ?>
              </div>
@@ -82,8 +90,6 @@
             
          }
          mysqli_close($db);   
-         print_r($Tcartas);
-         print_r($Cearn);
          ?>
         
     </body>

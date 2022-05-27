@@ -65,7 +65,7 @@
         <?php
             $idUsuario= ($_SESSION['user_id']);
             echo ($_SESSION['user_id']);
-          $query = "SELECT Tcarta.id, nombre, url_imagen, essencias , idUsuario FROM Tcarta LEFT JOIN TcartaUsuario ON Tcarta.id = TcartaUsuario.idCarta WHERE TcartaUsuario.idUsuario='.$idUsuario.'" ;
+          $query = "SELECT Tcarta.id, nombre, url_imagen, essencias , idUsuario FROM Tcarta LEFT JOIN TcartaUsuario ON Tcarta.id = TcartaUsuario.idCarta WHERE TcartaUsuario.idUsuario='$idUsuario'" ;
           echo ($query);
             $cartas = mysqli_query($db, $query) or die('Query error');
         

@@ -16,10 +16,13 @@
           $numero = ($_GET["result"]);
           $essencias = $_SESSION['essencias'];
           $ganancias = $_SESSION['ganancias'];
+          $total = $_SESSION['total'];
                      
             echo "<h1> Los Dioses han hablado , has sacado un $numero </h1>";
 
             echo "<h3> Tras haber apostado $essencias essencias, has conseguido ganar $ganancias essencias más </h3>";
+            
+            echo "<h3> Ahora tienes $total essencias  </h3>";
 
          }
     ?>

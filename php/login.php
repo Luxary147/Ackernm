@@ -13,8 +13,10 @@
 
         <h1> Login </h1>
         <form action="do_login.php" method="post" id="formulario">
-            <input name="l_email" type="email" placeholder="e-mail" id ="l_email"><br>
-            <input name="l_password" type="password" placeholder="Contraseña" id ="l_password"><br>
+            <label for="Email">Introduce tu correo Electronico :</label>
+            <input name="l_email" type="email" placeholder="e-mail" id ="l_email">
+            <label for="pass1">Introduce una Contraseña </label>
+            <input name="l_password" type="password" placeholder="Contraseña" id ="l_password">
             <input type="submit" value="Login">
         </form>
 

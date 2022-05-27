@@ -65,7 +65,7 @@
         <?php
             $idUsuario= ($_SESSION['user_id']);
             echo ($_SESSION['user_id']);
-          $query = "SELECT Tcarta.id, nombre, url_imagen, essencias , idUsuario FROM Tcarta LEFT JOIN TcartaUsuario ON Tcarta.id = TcartaUsuario.idCarta WHERE TcartaUsuario.idUsuario=$idUsuario" ;
+          $query = "SELECT Tcarta.id, nombre, url_imagen, essencias , idUsuario FROM Tcarta LEFT JOIN TcartaUsuario ON Tcarta.id = TcartaUsuario.idCarta" ;
           echo ($query);
             $cartas = mysqli_query($db, $query) or die('Query error');
         
@@ -79,11 +79,18 @@
              while ($only_row = mysqli_fetch_array($cartas)){
                  array_push($Tcartas, $only_row[0], $only_row[1], $only_row[2], $only_row[3],$only_row[4], $only_row[5]);
                  
-                 if ($only_row[4] != NULL && $only_row[4] == ($_SESSION['user_id'])){
-                     
-                     echo '<div id="carta'.$only_row[0].'">
-                            <img class ="imagen" src="'.$only_row[2].'" alt="'.$only_row[1].'">
-                            </div>';
+                 if ($only_row[4] != NULL ){
+                    
+                     //He tenido que añadir otro bucle , por que si no era ideferente el id del usuario, es decir que la consulta nos devolvia las cartas que tienen los distintos usuarios compradas
+                     //por lo que si el usurio 1 tiene la carta 3 comprada y el usuario 2 tambien tiene esa carta comprada, esta se mostraria dos veces.
+                     //sin embargo si hago un where en la sentencia sql con el id , y ese usuario no tiene ninguna carta comprada esto no mostrara nada
+                     //es por eso que primero que tengan un usuario , y luego a mayores que este se ha igual al id del usuario logeado
+                     if ($only_row[4] == $_SESSION['user_id']){
+                         
+                         echo '<div id="carta'.$only_row[0].'">
+                                <img class ="imagen" src="'.$only_row[2].'" alt="'.$only_row[1].'">
+                                </div>';
+                     }
                      
                  }else{
                   

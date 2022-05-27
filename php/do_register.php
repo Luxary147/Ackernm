@@ -23,7 +23,10 @@ if (strlen($pass) > 6 ){
             $stmt -> bind_param('sss', $nick, $passH, $email);
             $stmt -> execute();
             $stmt -> close();
-            header("Location: login.php");
+            //header("Location: login.php");
+            header("Refresh: 15; login.php");
+ 
+            echo 'Esto ha esperado';
       }
   }else{
     echo ("La contraseña es demasiado corta");

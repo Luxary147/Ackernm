@@ -8,9 +8,11 @@
 
         //recupero la información del input del formulario 
         $idCarta = $_POST['cartaid'];
-
+        echo ($idCarta);
         //almaceno el id del usuario logeado
         $idUsuario = $_SESSION['user_id'];
+                echo ($idUsuario);
+                
 
         $query2 = "SELECT esencias FROM Tusuario WHERE id = '".$_SESSION['user_id']."'";
         $esencias= mysqli_query($db, $query2) or die('Query error');

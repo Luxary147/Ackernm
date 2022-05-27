@@ -13,7 +13,7 @@
             
         if (isset($_SESSION['user_id'])) { 
           
-          $numero = ($_GET["result"];
+          $numero = ($_GET["result"]);
           $essencias = $_SESSION['essencias'];
           $ganacias = $_SESSION['ganancias'];
                      

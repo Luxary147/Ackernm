@@ -21,8 +21,8 @@
           if (mysqli_num_rows($esencias) > 0) {
              $Compra = mysqli_fetch_array($esencias);
                   
-
-             if ($Compra[0] >= 300){
+                //tienes que quedar con minimo 1 essencia tras realizar la compra
+             if ($Compra[0] > 300){
                 //Esto esta hecho de esta manera para que en el caso de que proximamente se quiero modificar el código sea mas sencillo
                 //Esto esta pensado para modificarlo en el futuro , en caso de implementar diferentes valores de essencias , dependiendo de la rareza de la carta.
                 //Actualmente todas valen por defecto 300 
@@ -34,7 +34,7 @@
                 $update = "UPDATE Tusuario SET esencias ='".$essent."'WHERE id ='".$_SESSION['user_id']."'";
                  
                  if ($db->query($update) === TRUE) {
-                          echo "Update realizada con exito ";      
+                          echo "<p> Update realizada con exito </p> ";      
                  }else {
                                 echo "Fallo ";
                  }
@@ -49,11 +49,11 @@
              }
           }else{
                   echo '<h2> No tienes suficientes essencias para realizar esta compra </h2>
-                  <a href="main.php"> Volver a lacolección </a>';
+                  <a href="main.php"> Volver a la colección </a>';
           }
                 
                  echo '<h2> Compra realizada con exito </h2>';
-                // header("Refresh: 10; main.php");
+                        header("Refresh: 5; main.php");
 
         } else {
             echo '<h2> El usuario tiene que estar logeado para poder adquerir cartas a su coleción </h2>

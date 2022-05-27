@@ -79,7 +79,7 @@
         }
                 
                 $_SESSION['essencias'] = $pago;
-                $_SESSION['ganancias'] = $essent;
+                $_SESSION['ganancias'] = $apuesta;
 
                 if ($db->query($update) === TRUE) {
                     echo '<p> Añadido el resultado correctamente </p>';      

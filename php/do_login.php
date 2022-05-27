@@ -41,7 +41,7 @@
       } else {
 
           //header('Location: login.php?login_failed_password=True');
-          echo 'La contraseña es incorrecta';
+          echo '<p> La contraseña es incorrecta </p>' ;
           header("Refresh: 3; login.php");
 
       }

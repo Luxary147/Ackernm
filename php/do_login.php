@@ -1,3 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color: rgb(106, 105, 105);
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        p{ 
+            color:white;
+            font-size:32px;
+            font-weight: bolder;
+            margin-top:12%;
+            text-align:center;
+        }
+    </style>
+    <title>Document</title>
+</head>
+  
 <?php
   $db = mysqli_connect('localhost', 'root', '1234', 'Ackernm') or die('Fail');
 
@@ -28,3 +51,5 @@
   }
   mysqli_close($db);
 ?>
+  
+</html>

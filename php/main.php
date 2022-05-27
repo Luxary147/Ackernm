@@ -73,8 +73,9 @@
           <div id="coleccion">
               
           <?php
+              $Tcartas= [];
              while ($only_row = mysqli_fetch_array($cartas)){
-                 array_push($Tcartas, $only_row[0], $only_row[1], $only_row[2], $only_row[3],$only_row[4]);
+                 array_push($Tcartas, $only_row[0], $only_row[1], $only_row[2], $only_row[3],$only_row[4], $only_row[5]);
                  
                  if ($only_row[4] == $_SESSION['user_id']){
                      
@@ -106,7 +107,8 @@
             
          }
         }
-         mysqli_close($db);   
+        print_r($Tcartas); 
+        mysqli_close($db);   
          ?>
         
     </body>

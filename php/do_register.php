@@ -36,7 +36,7 @@
         if (strlen($pass) > 6 ){
 
               if($pass != $pass2){
-                die '<p> Las contraseñas no coinciden </p>';
+                echo '<p> Las contraseñas no coinciden </p>';
                   header("Refresh: 2; register.php");
 
               }else{

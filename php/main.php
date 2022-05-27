@@ -15,8 +15,22 @@
                 <a href="?main=dado"><li> Tirada </li></a>
             </ul>
         </nav>
-        
+
+        <section>
          <?php
+            
+            if (isset($_GET["main"])){
+                switch ($_GET["main"]){
+                    case 'coleccion':
+                        include("coleccion.php");
+                        break;
+                       
+                    case 'dado':
+                        include ("Tirada.php");
+                        break;
+                }
+            }
+        
         session_start();
         
         $db = mysqli_connect('localhost', 'root', '1234', 'Ackernm') or die('Fail');

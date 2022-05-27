@@ -43,7 +43,7 @@
           <?php
              while ($only_row = mysqli_fetch_array($cartas)){
                      
-                     echo '<div id="imagenalfa">
+                     echo '<div class="imagenalfa">
                             <img class ="imagen" src="'.$only_row[2].'" alt="'.$only_row[1].'">
                             </div>';
                  }

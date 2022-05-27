@@ -14,7 +14,7 @@
             color:white;
             font-size:32px;
             font-weight: bolder;
-            margin-top:4%;
+            margin-top:12%;
             text-align:center;
         }
     </style>

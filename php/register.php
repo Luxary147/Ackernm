@@ -13,11 +13,15 @@
 
         <h1> Registro </h1>
         <form action="do_register.php" method="post" id="registro">
-            <input name="nick" type="text" placeholder="Nombre de Usuario" id ="nick"><br>
-            <input name="email" type="email" placeholder="e-mail" id ="f_email"><br>
-            <input name="pass" type="password" placeholder="Contraseña" id ="pass"><br>
-            <input name="pass2" type="password" placeholder="Repetir Contraseña" id ="pass2"><br>
-            <input type="submit" value="Registrame">
+        <label for="Nick"> Introduce tu nombre de Usuario </label>
+        <input name="nick" type="text" placeholder="Nombre de Usuario" id ="nick">
+        <label for="Email">Introduce tu correo Electronico :</label>
+        <input name="email" type="email" placeholder="e-mail" id ="f_email">
+        <label for="pass1">Introduce una Contraseña </label>
+        <input name="pass" type="password" placeholder="Contraseña" id ="pass">
+        <label for="pass2"> Repite la Contraseña</label>
+        <input name="pass2" type="password" placeholder="Repetir Contraseña" id ="pass2">
+        <input type="submit" value="Registrame">
         </form>
 
         <a href="login.php"> Ya tienes cuenta, Inicia Sesión</a>

@@ -24,7 +24,7 @@
         <input type="submit" value="Registrame">
         </form>
 
-        <a href="login.php"> <p> Ya tienes cuenta, Inicia Sesión </p></a>
+        <a href="login.php"> <p> Ya tienes cuenta, Inicia Sesión, Pulsando Aqui </p></a>
     </div>
     
 </body>

@@ -12,7 +12,8 @@
         }
         p{ 
             color:white;
-            font-size:22px;
+            font-size:32px;
+            font-weight: bolder;
             margin-top:4%;
             text-align:center;
         }

@@ -22,7 +22,7 @@
 
       }
 }else{
-    echo ("falla aqui");
+    echo '<p> No Existe hay ningun usuario registrado con ese email </p>';
   }
   mysqli_close($db);
 ?>

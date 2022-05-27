@@ -26,7 +26,7 @@
                         break;
                        
                     case 'dado':
-                        include ("Tirada.php");
+                        include ("tirada.php");
                         break;
                 }
             }

@@ -19,10 +19,12 @@
 
           //header('Location: login.php?login_failed_password=True');
           echo 'La contraseña es incorrecta';
+          header("Refresh: 3; login.php");
 
       }
 }else{
     echo '<p> No Existe hay ningun usuario registrado con ese email </p>';
+    header("Refresh: 3; login.php");
   }
   mysqli_close($db);
 ?>

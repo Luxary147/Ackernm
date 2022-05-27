@@ -25,6 +25,8 @@
             echo "<h3> Ahora tienes $total essencias  </h3>";
 
          }
+    
+    header("Refresh: 5; main.php?main=dado");
     ?>
 </body>
 </html>

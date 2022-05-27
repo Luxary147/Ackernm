@@ -45,6 +45,7 @@
                      echo '<div id="carta'.$only_row[0].'">
                             <img class ="imagen" src="'.$only_row[2].'" alt="'.$only_row[1].'">
                             </div>'
+                 }
               ?>
              </div>
           <?php

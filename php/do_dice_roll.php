@@ -9,12 +9,15 @@
         //recupero la información del input del formulario 
         $pago = $_POST['pago'];
         $apuesta = $pago;
+                echo ($apuesta);
 
         //almaceno el id del usuario logeado
         $idUsuario = $_SESSION['user_id'];
                 
-        $Ndado = $_POST['numero'];
-                
+        //$Ndado = $_POST['numero'];
+        //Generación de un numero aleatorio entre el uno y el 6 , esta funcion genera números enteros aleatorios criptográficos aptos para resultados imparciales críticos
+        $Ndado = random_int(1, 6);
+                echo ($Ndado);
         $query2 = "SELECT esencias FROM Tusuario WHERE id = '".$_SESSION['user_id']."'";
         $esencias= mysqli_query($db, $query2) or die('Query error');
                 
@@ -23,7 +26,7 @@
              $Compra = mysqli_fetch_array($esencias);
 
              //este es el numero de essencias del usuario 
-             echo ($Compra);
+             echo ($Compra[0]);
                   
 
              if ($Compra[0] >= $apuesta){
@@ -53,9 +56,11 @@
             
                 //Aqui se va a redondear el valor de esencias para que no nos almacene numeros decimales          
                 $apuesta = round($apuesta);
+                     echo ($apuesta);
 
                 //Aqui guardaremos el valor total de las essencias del usuario mas sus ganacnias tras la apuesta
                 $essent = ($Compra[0] - $pago) + $apuesta;
+                     echo ($essent);
 
                 $update = "UPDATE Tusuario SET esencias ='".$essent."'WHERE id ='".$_SESSION['user_id']."'";
                   
@@ -69,7 +74,7 @@
         }
 
                 if ($db->query($update) === TRUE) {
-                    echo "Añadido el resultado correctamente ";      
+                    echo '<p> Añadido el resultado correctamente </p>';      
                 }else {
                     echo "Fallo ";
                 }

@@ -3,6 +3,25 @@ body{
             box-sizing: border-box;
             font-family: Arial, Helvetica, sans-serif;
         }
+
+h1{
+             color:white;
+             margin-top:3%;
+             margin-bot:-2%;
+             font-size:44px;
+             text-align: center;
+}
+
+a{
+            text-decoration: none;
+}
+
+p{ 
+            color:white;
+            font-size:22px;
+            margin-top:4%;
+            text-align:center;
+}
         
         
 form{

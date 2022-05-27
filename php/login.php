@@ -20,7 +20,7 @@
             <input type="submit" value="Login">
         </form>
 
-        <a href="register.php"> No tienes cuenta, crea una</a>
+        <a href="register.php"> <p> No tienes cuenta, crea una <bolder>Aqui</bolder></p></a>
     </div>
     
 </body>

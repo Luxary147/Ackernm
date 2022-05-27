@@ -57,11 +57,13 @@
             
         } else {
         ?>
+        
             <div class="main">
                 <p > Estas logueado buen trabajo </p>
             </div>
         
         <?php
+            echo ($_SESSION['user_id']);
           $query = "SELECT Tcarta.id, nombre, url_imagen, essencias , idUsuario FROM Tcarta LEFT JOIN TcartaUsuario ON Tcarta.id = TcartaUsuario.idCarta" ;
           $cartas = mysqli_query($db, $query) or die('Query error');
         

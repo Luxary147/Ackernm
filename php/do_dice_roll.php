@@ -43,7 +43,7 @@
                         $apuesta = $apuesta * 1.25;
                         break;
                     case 5:
-                        $apuesta = $apuesta * 1.5:
+                        $apuesta = $apuesta * 1.5;
                         break;
                     case 6:
                         $apuesta = $apuesta *3;
@@ -55,7 +55,7 @@
                 $apuesta = round($apuesta);
 
                 //Aqui guardaremos el valor total de las essencias del usuario mas sus ganacnias tras la apuesta
-                $essent = ($Compra[0] - $pago) + $apuesta
+                $essent = ($Compra[0] - $pago) + $apuesta;
 
                 $update = "UPDATE Tusuario SET esencias ='".$essent."'WHERE id ='".$_SESSION['user_id']."'";
                   
@@ -65,7 +65,7 @@
                 
         }else{
                 //Este error nunca deberia de saltar , pero nunca se sabe asi que aqui esta ( a mi me salio)
-                echo '<p> Este usuario no dispone de ningun valor de esencias en la base de datos </p>'
+                echo '<p> Este usuario no dispone de ningun valor de esencias en la base de datos </p>';
         }
 
                 if ($db->query($update) === TRUE) {

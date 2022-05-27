@@ -77,12 +77,17 @@
                 //Este error nunca deberia de saltar , pero nunca se sabe asi que aqui esta ( a mi me salio)
                 echo '<p> Este usuario no dispone de ningun valor de esencias en la base de datos </p>';
         }
+                
+                $_SESSION['essencias'] = $pago;
+                $_SESSION['ganancias'] = $essent;
 
                 if ($db->query($update) === TRUE) {
                     echo '<p> Añadido el resultado correctamente </p>';      
                 }else {
                     echo "Fallo ";
                 }
+                
+                
 
 
         } else {
@@ -92,5 +97,5 @@
         
         mysqli_close($db);
 
-        
+        header("Location: dice_roll.php?result=$Ndado");
 ?>

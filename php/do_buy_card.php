@@ -53,7 +53,7 @@
           }
                 
                  echo '<h2> Compra realizada con exito </h2>';
-                 header("Refresh: 10; main.php");
+                // header("Refresh: 10; main.php");
 
         } else {
             echo '<h2> El usuario tiene que estar logeado para poder adquerir cartas a su coleción </h2>

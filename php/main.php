@@ -31,6 +31,7 @@
                 <p>No estás logueado, para poder interactuar con la colección, Inicia Sesión <a href='/login.php'> aquí</a>.</p>
             </div>
         
+        <?php
           $query = "SELECT id, nombre, url_imagen, essencias FROM Tcarta" ;
           $cartas = mysqli_query($db, $query) or die('Query error');
         

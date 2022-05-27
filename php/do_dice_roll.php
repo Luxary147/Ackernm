@@ -55,16 +55,7 @@
                 $essent = ($Compra[0] - $pago) + $apuesta;
 
                 $update = "UPDATE Tusuario SET esencias ='".$essent."'WHERE id ='".$_SESSION['user_id']."'";
-                  
-                  }else{
-                          echo ' <p> No Dispone de las sufiecientes essecias para apostar dicha cantidad </p>';
-                  }
-                
-        }else{
-                //Este error nunca deberia de saltar , pero nunca se sabe asi que aqui esta ( a mi me salio)
-                echo '<p> Este usuario no dispone de ningun valor de esencias en la base de datos </p>';
-        }
-                
+                     
                 $_SESSION['essencias'] = $pago;
                 $_SESSION['ganancias'] = $apuesta;
                 $_SESSION['total'] = $essent;
@@ -75,8 +66,18 @@
                     echo "Fallo ";
                 }
                 
+                     
+                header("Location: dice_roll.php?result=$Ndado");
+                  
+                  }else{
+                          echo ' <p> No Dispone de las sufiecientes essecias para apostar dicha cantidad </p>';
+                  }
                 
-
+        }else{
+                //Este error nunca deberia de saltar , pero nunca se sabe asi que aqui esta ( a mi me salio)
+                echo '<p> Este usuario no dispone de ningun valor de esencias en la base de datos </p>';
+        }
+                
 
         } else {
             echo '<h2> El usuario tiene que estar logeado para poder adquerir cartas a su coleción </h2>
@@ -85,5 +86,5 @@
         
         mysqli_close($db);
 
-        header("Location: dice_roll.php?result=$Ndado");
+
 ?>

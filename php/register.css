@@ -6,10 +6,12 @@ body{
 
 h1{
              color:write;
+             margin-top:2%;
+             font-size:32px;
              text-align: center;
 }
 
-a{ 
+p{ 
             color:write;
             font-size:22px;
             margin-top:2%;

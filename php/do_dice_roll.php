@@ -71,6 +71,7 @@
                   
                   }else{
                           echo ' <p> No Dispone de las sufiecientes essecias para apostar dicha cantidad </p>';
+                                        header("Refresh: 2; main.php?main=dado");
                   }
                 
         }else{

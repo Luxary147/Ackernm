@@ -8,10 +8,9 @@
 
         //recupero la información del input del formulario 
         $idCarta = $_POST['cartaid'];
-        echo ($idCarta);
+     
         //almaceno el id del usuario logeado
         $idUsuario = $_SESSION['user_id'];
-                echo ($idUsuario);
                 
 
         $query2 = "SELECT esencias FROM Tusuario WHERE id = '".$_SESSION['user_id']."'";
@@ -53,7 +52,9 @@
           }
                 
                  echo '<h2> Compra realizada con exito </h2>';
-                        header("Refresh: 5; main.php");
+                
+                echo '<h2> Regresando a la Colección , espere </h2>';
+                        header("Refresh: 3; main.php");
 
         } else {
             echo '<h2> El usuario tiene que estar logeado para poder adquerir cartas a su coleción </h2>

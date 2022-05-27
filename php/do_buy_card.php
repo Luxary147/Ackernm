@@ -53,7 +53,7 @@
                 
                  echo '<h2> Compra realizada con exito </h2>';
                 
-                echo '<h2> Regresando a la Colección , espere </h2>';
+                echo '<h2> Regresando a la Colección , Espere </h2>';
                         header("Refresh: 3; main.php");
 
         } else {

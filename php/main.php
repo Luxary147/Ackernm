@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -31,7 +32,6 @@
             }
         
         session_start();
-            
         
         $db = mysqli_connect('localhost', 'root', '1234', 'Ackernm') or die('Fail');
           if (!$db) {
@@ -70,16 +70,11 @@
             
         } else {
         ?>
-            
             <div class="main">
                 <p > Estas logueado buen trabajo </p>
             </div>
         
         <?php
-            
-            $idUsuario = $_SESSION['user_id'];
-            echo ($idUsuario);
-            echo "hola";
           $query = "SELECT Tcarta.id, nombre, url_imagen, essencias , idUsuario FROM Tcarta LEFT JOIN TcartaUsuario ON Tcarta.id = TcartaUsuario.idCarta" ;
           $cartas = mysqli_query($db, $query) or die('Query error');
         
@@ -89,22 +84,17 @@
           <div id="coleccion">
               
           <?php
-              $Tcartas = [];
              while ($only_row = mysqli_fetch_array($cartas)){
                  array_push($Tcartas, $only_row[0], $only_row[1], $only_row[2], $only_row[3],$only_row[4]);
                  
                  if ($only_row[4] != NULL){
                      
-                     echo ($only_row[4]);
-                     echo ($idUsuario);
-                       if ($only_row[4] == $idUsuario){
-
-                                 echo '<div id="carta'.$only_row[0].'">
-                                        <img class ="imagen" src="'.$only_row[2].'" alt="'.$only_row[1].'">
-                                        </div>';
-
+                     echo '<div id="carta'.$only_row[0].'">
+                            <img class ="imagen" src="'.$only_row[2].'" alt="'.$only_row[1].'">
+                            </div>';
+                     
                  }else{
-                  $cartarepetida = $cartarepetida + 1;
+                  
                     echo '<div id="formu">
                                <form action="C_detail.php" method="post" id="C_detail">
                                       <input id="cartaid" name="cartaid" type="hidden" value="'.$only_row[0].'">
@@ -126,9 +116,6 @@
             
          }
         }
-        }
-         print_r($cartarepetida);
-            print_r($Tcartas);
          mysqli_close($db);   
          ?>
         

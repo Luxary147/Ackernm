@@ -31,6 +31,7 @@
             }
         
         session_start();
+            
         
         $db = mysqli_connect('localhost', 'root', '1234', 'Ackernm') or die('Fail');
           if (!$db) {
@@ -39,6 +40,7 @@
         
         if (empty($_SESSION['user_id'])) { 
             //bloque php donde compruebo si el ususario esta logeado o no 
+            $idUsuario = $_SESSION['user_id'];
         ?>
             <div class="contenedorLogin">
                 <p>No estás logueado, para poder interactuar con la colección, Inicia Sesión <a href='/login.php'> aquí</a>.</p>
@@ -89,6 +91,8 @@
                  
                  if ($only_row[4] != NULL){
                      
+                     echo ($only_row[4]);
+                     echo ($idUsuario);
                        if ($only_row[4] == $idUsuario){
 
                                  echo '<div id="carta'.$only_row[0].'">

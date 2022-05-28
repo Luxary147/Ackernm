@@ -118,6 +118,7 @@
             
          }
         }
+        }
          print_r($cartarepetida);
             print_r($Tcartas);
          mysqli_close($db);   

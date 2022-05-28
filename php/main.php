@@ -41,6 +41,8 @@
         if (empty($_SESSION['user_id'])) { 
             //bloque php donde compruebo si el ususario esta logeado o no 
             $idUsuario = $_SESSION['user_id'];
+            echo ($idUsuario);
+            echo "hola";
         ?>
             <div class="contenedorLogin">
                 <p>No estás logueado, para poder interactuar con la colección, Inicia Sesión <a href='/login.php'> aquí</a>.</p>

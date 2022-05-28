@@ -135,7 +135,7 @@
             
          }
         }
-         print_r($Tcartas)
+         print_r($Tcartas);
          mysqli_close($db);   
          ?>
     </body>

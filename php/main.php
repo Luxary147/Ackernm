@@ -94,12 +94,9 @@
                                  echo '<div id="carta'.$only_row[0].'">
                                         <img class ="imagen" src="'.$only_row[2].'" alt="'.$only_row[1].'">
                                         </div>';
-                               }else{
-                                 $cartarepetida = $cartarepetida + 1;
-                               }
 
                  }else{
-                  
+                  $cartarepetida = $cartarepetida + 1;
                     echo '<div id="formu">
                                <form action="C_detail.php" method="post" id="C_detail">
                                       <input id="cartaid" name="cartaid" type="hidden" value="'.$only_row[0].'">

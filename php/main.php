@@ -44,7 +44,7 @@
             if (isset($_GET["main"])){
                 switch ($_GET["main"]){
                     case 'coleccion':
-                        include("coleccion.php");
+                        include("colecion.php");
                         break;
                        
                     case 'dado':

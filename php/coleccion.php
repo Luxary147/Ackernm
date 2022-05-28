@@ -51,15 +51,11 @@ session_start();
                  array_push($Tcartas, $only_row[0], $only_row[1], $only_row[2], $only_row[3],$only_row[4]);
                  
                  if ($only_row[4] != NULL){
-                   
-                   if ($only_row[4] == $idUsuario){
                      
                      echo '<div id="carta'.$only_row[0].'">
                             <img class ="imagen" src="'.$only_row[2].'" alt="'.$only_row[1].'">
                             </div>';
-                   }else{
-                     $cartarepetida = $cartarepetida + 1;
-                   }
+                     
                  }else{
                   
                     echo '<div id="formu">

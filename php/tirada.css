@@ -1,4 +1,8 @@
-         #formulario h1{
+       *{
+             background-color: rgb(236, 222, 232);
+        }
+
+        #formulario h1{
              color:black;
              margin-top:3%;
              font-size:44px;
@@ -7,7 +11,7 @@
         }
 
         #formulario h3{
-            color:rgba(38, 116, 42, 0.966);
+            color:rgb(234, 116, 116);
              margin-top:3%;
              font-size:36px;
              text-align: center;
@@ -15,7 +19,7 @@
 
         #stats{
             display: block;
-            color:rgb(211, 244, 220);
+            color:rgb(35, 138, 40);
             justify-content: center;
             align-items: center;
             margin-top: 5%;

@@ -75,7 +75,7 @@
                  echo '<h2> Compra realizada con exito </h2>';
                 
                 echo '<h2> Regresando a la Colección , Espere </h2>';
-                        header("Refresh: 3; main.php");
+                        header("Refresh: 3; main.php?main=coleccion");
 
         } else {
             echo '<h2> El usuario tiene que estar logeado para poder adquerir cartas a su coleción </h2>

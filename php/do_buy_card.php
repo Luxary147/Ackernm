@@ -8,12 +8,12 @@
     <title>Document</title>
     <style>
         h2 {
-            margin-top:12%;
+            margin-top:2%;
             text-align: center;
             justify-content: center;
         }
         p{
-            margin-top:12%;
+            margin-top:2%;
             text-align: center;
             justify-content: center;
         }

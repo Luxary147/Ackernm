@@ -39,7 +39,7 @@
         
         
         <nav class="selecciones">
-            <ul>
+            <ul id="ul1">
                 <a href="?main=coleccion"><li> Colección </li></a>
                 <a href="?main=dado"><li> Tirada </li></a>
             </ul>

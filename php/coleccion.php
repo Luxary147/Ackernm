@@ -9,7 +9,6 @@ session_start();
         
         if (empty($_SESSION['user_id'])) { 
           
-          $idUsuario = $_SESSION['user_id'];
           
           $query = "SELECT id, nombre, url_imagen, essencias FROM Tcarta" ;
           $cartas = mysqli_query($db, $query) or die('Query error');
@@ -36,8 +35,10 @@ session_start();
               }
             
         } else {
+                
+          $idUsuario = $_SESSION['user_id'];
 
-          $query = "SELECT Tcarta.id, nombre, url_imagen, essencias , idUsuario FROM Tcarta LEFT JOIN TcartaUsuario ON Tcarta.id = TcartaUsuario.idCarta" ;
+          $query = "SELECT Tcarta,id , nombre , url_imagen , essencias , idUsuario FROM Tcarta LEFT JOIN (SELECT * FROM TcartaUsuario WHERE idUsuario = ".$idUsuario." ) AS CartaUsuario ON Tcarta.id = CartaUsuario.idCarta";
           $cartas = mysqli_query($db, $query) or die('Query error');
         
           if (mysqli_num_rows($cartas) > 0) {     
@@ -46,9 +47,7 @@ session_start();
           <div id="coleccion">
               
           <?php
-            $Tcartas= [];
              while ($only_row = mysqli_fetch_array($cartas)){
-                 array_push($Tcartas, $only_row[0], $only_row[1], $only_row[2], $only_row[3],$only_row[4]);
                  
                  if ($only_row[4] != NULL){
                      

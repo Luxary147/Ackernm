@@ -13,7 +13,6 @@
         //almaceno el id del usuario logeado
         $idUsuario = $_SESSION['user_id'];
                 
-        //$Ndado = $_POST['numero'];
         //Generación de un numero aleatorio entre el uno y el 6 , esta funcion genera números enteros aleatorios criptográficos aptos para resultados imparciales críticos
         $Ndado = random_int(1, 6);
         $query2 = "SELECT esencias FROM Tusuario WHERE id = '".$_SESSION['user_id']."'";

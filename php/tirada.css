@@ -1,10 +1,4 @@
-        body{
-            background-color: rgb(106, 105, 105);
-            box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        h1{
+         #formulario h1{
              color:white;
              margin-top:3%;
              font-size:44px;
@@ -12,7 +6,7 @@
              text-decoration: underline;
         }
 
-        h3{
+        #formulario h3{
             color:rgb(234, 116, 116);
              margin-top:3%;
              font-size:36px;
@@ -28,13 +22,13 @@
             margin-left: 25%;
         }
 
-        p{
+        #stats p{
             font-size: 20px;
             margin-left: -7%;
         }
 
 
-        form{
+        #formulario form{
             background-color: white;
             border-radius: 4px;
             border: 3px solid black;
@@ -46,7 +40,7 @@
             width: 30%;
         }
 
-        label{
+        #formulario label{
             display: block;
             margin: 10px 0px;
             font-weight: bold;
@@ -54,7 +48,7 @@
             font-size: 32px;
         }
 
-        input[type="number"]{
+        #formulario input[type="number"]{
             margin-top: 6%;
             margin-left: 30%;
             margin-bottom: 4%;
@@ -66,7 +60,7 @@
             padding-left: 15%;
         }
 
-        input[type="submit"]{
+        #formulario input[type="submit"]{
             margin-left: 25px;
             border-radius: 3px;
             width: 25%;

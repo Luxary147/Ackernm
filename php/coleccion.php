@@ -38,7 +38,7 @@ session_start();
                 
           $idUsuario = $_SESSION['user_id'];
 
-          $query = "SELECT Tcarta,id , nombre , url_imagen , essencias , idUsuario FROM Tcarta LEFT JOIN (SELECT * FROM TcartaUsuario WHERE idUsuario = ".$idUsuario." ) AS CartaUsuario ON Tcarta.id = CartaUsuario.idCarta";
+          $query = "SELECT Tcarta.id , nombre , url_imagen , essencias , idUsuario FROM Tcarta LEFT JOIN (SELECT * FROM TcartaUsuario WHERE idUsuario = ".$idUsuario." ) AS CartaUsuario ON Tcarta.id = CartaUsuario.idCarta";
           $cartas = mysqli_query($db, $query) or die('Query error');
         
           if (mysqli_num_rows($cartas) > 0) {     

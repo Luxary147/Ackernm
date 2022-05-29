@@ -29,6 +29,10 @@
                 <p > Estas logueado buen trabajo </p>
             </div>
         
+            <div id="cerrar">
+                <input type="submit" value="Cerrar Sesion" onclick="location.href='do_logout.php'" style="padding:10px; display:flex; float:right ; border-radius: 8px; margin-right: 2%;  font-size: 22px;"  >
+            </div>
+        
         <?php
             }
          ?>

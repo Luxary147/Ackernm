@@ -40,8 +40,8 @@
         
         <nav class="selecciones">
             <ul id="ul1">
-                <a href="?main=coleccion"><li> Colección </li></a>
-                <a href="?main=dado"><li> Tirada </li></a>
+                <a href="?main=coleccion"><li id="li2"> Colección </li></a>
+                <a href="?main=dado"><li id="li2"> Tirada </li></a>
             </ul>
         </nav>
         <section>

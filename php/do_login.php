@@ -65,7 +65,7 @@
           $db->query($updateF);
           
           echo '<p> Redirigiendo a la pestaña principal </p>' ;
-          echo '<img src="https://github.com/Luxary147/Ackernm/blob/a45fd6d5ec3e36c15aa9870238ce33e84e7db4cd/raw/img/giphy.gif" alt="Cargando">';
+          echo '<img src="https://github.com/Luxary147/Ackernm/blob/main/raw/img/spinnerTransparente.gif?raw=true" alt="Cargando">';
           header("Refresh:2; main.php");
 
       } else {

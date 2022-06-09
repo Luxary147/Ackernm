@@ -39,7 +39,7 @@
           header("Location: main.php");
 
       } else {
-
+          print_r(date('Y-m-d'));
           echo '<p> La contraseña es incorrecta </p>' ;
           header("Refresh: 3; login.php");
 

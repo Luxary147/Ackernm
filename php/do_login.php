@@ -27,8 +27,11 @@
         }
         
        img{
-           margin-left:40%;
+           height: 50px;
+           margin-left:48%;
+           width: 50px;
         }
+        
     </style>
     <title>Document</title>
 </head>

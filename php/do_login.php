@@ -44,13 +44,15 @@
                $esencias = $only_row[2] + 300;
                $updateE = "UPDATE Tusuario SET esencias ='".$esencias."'WHERE id ='".$_SESSION['user_id']."'";  
                $db->query($updateE);
+                
+                echo '<h2> Gracias por regresar </h2>' ;
+                echo '<p> Se han añadido 300 esencias a tu alijo </p>' ;
             }
           //guardar fecha del inicio de sesion         
           $updateF = "UPDATE Tusuario SET fecha_ultimo_login ='".$fecha."'WHERE id ='".$_SESSION['user_id']."'";  
           $db->query($updateF);
           
-          
-          header("Location: main.php");
+          header("Refresh:3; main.php");
 
       } else {
           echo '<p> La contraseña es incorrecta </p>' ;

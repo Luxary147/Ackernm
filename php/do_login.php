@@ -36,10 +36,21 @@
       if (password_verify($password_posted, $only_row[1])) {
           session_start();
           $_SESSION['user_id'] = $only_row[0];
+
+          //guardar fecha del inicio de sesion 
+          $fecha = (date('Y-m-d');
+                    
+          $update = "UPDATE Tusuario SET fecha_ultimo_login ='".$fecha."'WHERE id ='".$_SESSION['user_id']."'";
+                 
+                 if ($db->query($update) === TRUE) {
+                          echo "<p> Update realizada con exito </p> ";      
+                 }else {
+                                echo "Fallo ";
+                 }
+                    
           header("Location: main.php");
 
       } else {
-          print_r(date('Y-m-d'));
           echo '<p> La contraseña es incorrecta </p>' ;
           header("Refresh: 3; login.php");
 

@@ -14,7 +14,7 @@
             color:white;
             font-size:32px;
             font-weight: bolder;
-            margin-top:12%;
+            margin-top:6%;
             text-align:center;
         }
         
@@ -22,7 +22,7 @@
             color:white;
             font-size:40px;
             font-weight: bolder;
-            margin-top:12%;
+            margin-top:2%;
             text-align:center;
         }
         

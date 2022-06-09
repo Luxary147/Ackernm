@@ -29,6 +29,7 @@
        img{
            height: 50px;
            margin-left:48%;
+           margin-top:1%;
            width: 50px;
         }
         

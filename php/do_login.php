@@ -38,7 +38,7 @@
           $_SESSION['user_id'] = $only_row[0];
 
           //guardar fecha del inicio de sesion 
-          $fecha = (date('Y-m-d');
+          $fecha = date('Y-m-d');
                     
           $update = "UPDATE Tusuario SET fecha_ultimo_login ='".$fecha."'WHERE id ='".$_SESSION['user_id']."'";
                  

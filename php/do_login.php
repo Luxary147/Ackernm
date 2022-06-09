@@ -27,7 +27,7 @@
   $email_posted = $_POST['l_email'];
   $password_posted = $_POST['l_password'];
 
-  $query = "SELECT id, contraseña FROM Tusuario WHERE email = '".$email_posted."'";
+  $query = "SELECT id, contraseña, fecha_ultimo_login FROM Tusuario WHERE email = '".$email_posted."'";
   $result = mysqli_query($db, $query) or die('Query error');
 
   if (mysqli_num_rows($result) > 0) {
@@ -37,16 +37,15 @@
           session_start();
           $_SESSION['user_id'] = $only_row[0];
 
-          //guardar fecha del inicio de sesion 
+          //comprobar si es un inicio de sesion es en una fecha distinta
           $fecha = date('Y-m-d');
-                    
+            if ($only_row[2] != $fecha ){
+                
+          //guardar fecha del inicio de sesion         
           $update = "UPDATE Tusuario SET fecha_ultimo_login ='".$fecha."'WHERE id ='".$_SESSION['user_id']."'";
                  
-                 if ($db->query($update) === TRUE) {
-                          echo "<p> Update realizada con exito </p> ";      
-                 }else {
-                                echo "Fallo ";
-                 }
+          $db->query($update)
+            }
                     
           header("Location: main.php");
 

@@ -17,6 +17,18 @@
             margin-top:12%;
             text-align:center;
         }
+        
+        h2{
+            color:white;
+            font-size:40px;
+            font-weight: bolder;
+            margin-top:12%;
+            text-align:center;
+        }
+        
+       img{
+           margin-left:40%;
+        }
     </style>
     <title>Document</title>
 </head>
@@ -52,7 +64,9 @@
           $updateF = "UPDATE Tusuario SET fecha_ultimo_login ='".$fecha."'WHERE id ='".$_SESSION['user_id']."'";  
           $db->query($updateF);
           
-          header("Refresh:3; main.php");
+          echo '<p> Redirigiendo a la pestaña principal </p>' ;
+          echo '<img src="https://github.com/Luxary147/Ackernm/blob/a45fd6d5ec3e36c15aa9870238ce33e84e7db4cd/raw/img/giphy.gif" alt="Cargando">';
+          header("Refresh:2; main.php");
 
       } else {
           echo '<p> La contraseña es incorrecta </p>' ;

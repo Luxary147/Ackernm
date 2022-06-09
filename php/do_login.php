@@ -44,7 +44,7 @@
           //guardar fecha del inicio de sesion         
           $update = "UPDATE Tusuario SET fecha_ultimo_login ='".$fecha."'WHERE id ='".$_SESSION['user_id']."'";
                  
-          $db->query($update)
+          $db->query($update);
             }
                     
           header("Location: main.php");
